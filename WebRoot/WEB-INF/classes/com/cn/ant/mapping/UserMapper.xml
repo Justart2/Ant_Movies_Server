@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cn.ant.dao.UserMapper" >
+  <resultMap id="BaseResultMap" type="com.cn.ant.entity.User" >
+    <id column="u_id" property="uId" jdbcType="INTEGER" />
+    <result column="u_sex" property="uSex" jdbcType="INTEGER" />
+    <result column="u_age" property="uAge" jdbcType="INTEGER" />
+    <result column="u_phone" property="uPhone" jdbcType="VARCHAR" />
+    <result column="u_mail" property="uMail" jdbcType="VARCHAR" />
+    <result column="u_name" property="uName" jdbcType="VARCHAR" />
+    <result column="u_psw" property="uPsw" jdbcType="VARCHAR" />
+    <result column="u_picture" property="uPicture" jdbcType="VARCHAR" />
+    <result column="u_rank" property="uRank" jdbcType="VARCHAR" />
+    <result column="u_score" property="uScore" jdbcType="INTEGER" />
+    <result column="u_loc" property="uLoc" jdbcType="VARCHAR" />
+    <result column="u_third_part" property="uThirdPart" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    u_id, u_sex, u_age, u_phone, u_mail, u_name, u_psw, u_picture, u_rank, u_score, u_loc, 
+    u_third_part
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from ant_user_info
+    where u_id = #{uId,jdbcType=INTEGER}
+  </select>
+  <!-- 用户登录数据库查询 -->
+  <select id="selectUserLoginInfo" resultMap="BaseResultMap" parameterType="com.cn.ant.entity.User" >
+    select 
+    <include refid="Base_Column_List" />
+    from ant_user_info
+    where u_mail = #{uMail} or u_phone = #{uPhone} and u_psw = #{uPsw}
+  </select>
+  
+  <!-- 用户手机验证登录数据库查询 -->
+  <select id="selectUserLoginByPhoneInfo" resultMap="BaseResultMap" parameterType="com.cn.ant.entity.User" >
+    select 
+    <include refid="Base_Column_List" />
+    from ant_user_info
+    where u_phone = #{uPhone} ;
+  </select>
+  
+  
+  <!-- 用户使用第三方登录数据库查询 -->
+  <select id="selectUserThirdLoginInfo" resultMap="BaseResultMap" parameterType="com.cn.ant.entity.User" >
+    select 
+    <include refid="Base_Column_List" />
+    from ant_user_info
+    where u_third_part = #{uThirdPart}
+  </select>
+  
+  <!-- 修改用户的个人信息 -->
+  <update id="modifyUserMsg" parameterType="com.cn.ant.entity.User" >
+    update ant_user_info
+    set u_sex = #{uSex,jdbcType=INTEGER},
+      u_age = #{uAge,jdbcType=INTEGER},
+      u_phone = #{uPhone,jdbcType=VARCHAR},
+      u_mail = #{uMail,jdbcType=VARCHAR},
+      u_name = #{uName,jdbcType=VARCHAR}
+    where u_id = #{uId,jdbcType=INTEGER}
+  </update>
+  <!-- 通过Id修改密码 -->
+  <update id="updateUserPaswByID" parameterType="java.util.HashMap" >
+    update ant_user_info
+    set
+       u_psw = #{uPsw}
+    where u_id = #{uId}
+  </update>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from ant_user_info
+    where u_id = #{uId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.cn.ant.entity.User" >
+    insert into ant_user_info ( u_sex, u_age, 
+      u_phone, u_mail, u_name, 
+      u_psw, u_picture, u_rank, 
+      u_score, u_loc, u_third_part
+      )
+    values (#{uSex}, #{uAge,jdbcType=INTEGER}, 
+      #{uPhone,jdbcType=VARCHAR}, #{uMail,jdbcType=VARCHAR}, #{uName}, 
+      #{uPsw,jdbcType=VARCHAR}, #{uPicture,jdbcType=VARCHAR}, #{uRank,jdbcType=VARCHAR}, 
+      #{uScore,jdbcType=INTEGER}, #{uLoc,jdbcType=VARCHAR}, #{uThirdPart,jdbcType=VARCHAR}
+      )
+  </insert>
+   <!-- 通过id修改用户的img -->
+  <update id="updateUserPhoto" parameterType="java.util.HashMap" >
+    update ant_user_info
+    set  u_picture= #{uPicture}
+    where u_id = #{uId}
+  </update>
+  <insert id="insertSelective" parameterType="com.cn.ant.entity.User" >
+    insert into ant_user_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="uId != null" >
+        u_id,
+      </if>
+      <if test="uSex != null" >
+        u_sex,
+      </if>
+      <if test="uAge != null" >
+        u_age,
+      </if>
+      <if test="uPhone != null" >
+        u_phone,
+      </if>
+      <if test="uMail != null" >
+        u_mail,
+      </if>
+      <if test="uName != null" >
+        u_name,
+      </if>
+      <if test="uPsw != null" >
+        u_psw,
+      </if>
+      <if test="uPicture != null" >
+        u_picture,
+      </if>
+      <if test="uRank != null" >
+        u_rank,
+      </if>
+      <if test="uScore != null" >
+        u_score,
+      </if>
+      <if test="uLoc != null" >
+        u_loc,
+      </if>
+      <if test="uThirdPart != null" >
+        u_third_part,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="uId != null" >
+        #{uId,jdbcType=INTEGER},
+      </if>
+      <if test="uSex != null" >
+        #{uSex,jdbcType=INTEGER},
+      </if>
+      <if test="uAge != null" >
+        #{uAge,jdbcType=INTEGER},
+      </if>
+      <if test="uPhone != null" >
+        #{uPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="uMail != null" >
+        #{uMail,jdbcType=VARCHAR},
+      </if>
+      <if test="uName != null" >
+        #{uName,jdbcType=VARCHAR},
+      </if>
+      <if test="uPsw != null" >
+        #{uPsw,jdbcType=VARCHAR},
+      </if>
+      <if test="uPicture != null" >
+        #{uPicture,jdbcType=VARCHAR},
+      </if>
+      <if test="uRank != null" >
+        #{uRank,jdbcType=VARCHAR},
+      </if>
+      <if test="uScore != null" >
+        #{uScore,jdbcType=INTEGER},
+      </if>
+      <if test="uLoc != null" >
+        #{uLoc,jdbcType=VARCHAR},
+      </if>
+      <if test="uThirdPart != null" >
+        #{uThirdPart,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.cn.ant.entity.User" >
+    update ant_user_info
+    <set >
+      <if test="uSex != null" >
+        u_sex = #{uSex,jdbcType=INTEGER},
+      </if>
+      <if test="uAge != null" >
+        u_age = #{uAge,jdbcType=INTEGER},
+      </if>
+      <if test="uPhone != null" >
+        u_phone = #{uPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="uMail != null" >
+        u_mail = #{uMail,jdbcType=VARCHAR},
+      </if>
+      <if test="uName != null" >
+        u_name = #{uName,jdbcType=VARCHAR},
+      </if>
+      <if test="uPsw != null" >
+        u_psw = #{uPsw,jdbcType=VARCHAR},
+      </if>
+      <if test="uPicture != null" >
+        u_picture = #{uPicture,jdbcType=VARCHAR},
+      </if>
+      <if test="uRank != null" >
+        u_rank = #{uRank,jdbcType=VARCHAR},
+      </if>
+      <if test="uScore != null" >
+        u_score = #{uScore,jdbcType=INTEGER},
+      </if>
+      <if test="uLoc != null" >
+        u_loc = #{uLoc,jdbcType=VARCHAR},
+      </if>
+      <if test="uThirdPart != null" >
+        u_third_part = #{uThirdPart,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where u_id = #{uId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.cn.ant.entity.User" >
+    update ant_user_info
+    set u_sex = #{uSex,jdbcType=INTEGER},
+      u_age = #{uAge,jdbcType=INTEGER},
+      u_phone = #{uPhone,jdbcType=VARCHAR},
+      u_mail = #{uMail,jdbcType=VARCHAR},
+      u_name = #{uName,jdbcType=VARCHAR},
+      u_psw = #{uPsw,jdbcType=VARCHAR},
+      u_picture = #{uPicture,jdbcType=VARCHAR},
+      u_rank = #{uRank,jdbcType=VARCHAR},
+      u_score = #{uScore,jdbcType=INTEGER},
+      u_loc = #{uLoc,jdbcType=VARCHAR},
+      u_third_part = #{uThirdPart,jdbcType=VARCHAR}
+    where u_id = #{uId,jdbcType=INTEGER}
+  </update>
+</mapper>

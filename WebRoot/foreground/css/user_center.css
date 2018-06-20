@@ -1,0 +1,645 @@
+﻿.content {
+	margin: 20px auto 0px; width: 1000px; clear: both;
+}
+.content div {
+	margin: 0px; padding: 0px; line-height: 100%; font-style: normal; font-weight: lighter;
+}
+.content table {
+	margin: 0px; padding: 0px; line-height: 100%; font-style: normal; font-weight: lighter;
+}
+.content td {
+	margin: 0px; padding: 0px; line-height: 100%; font-style: normal; font-weight: lighter;
+}
+.content th {
+	margin: 0px; padding: 0px; line-height: 100%; font-style: normal; font-weight: lighter;
+}
+.content input {
+	margin: 0px; padding: 0px; line-height: 100%; font-style: normal; font-weight: lighter;
+}
+.content em {
+	margin: 0px; padding: 0px; line-height: 100%; font-style: normal; font-weight: lighter;
+}
+.content .require {
+	color: rgb(236, 92, 39); padding-right: 3px;
+}
+.content .tl {
+	text-align: left;
+}
+.content .tr {
+	text-align: right;
+}
+.content .input_text_style {
+	padding: 0px 1px 0px 5px; border: 1px solid rgb(116, 144, 169); width: 180px; height: 23px; line-height: 23px;
+}
+.content .textareaStyle {
+	border: 1px solid rgb(116, 144, 169); color: rgb(102, 102, 102);
+}
+.content .selectStyle {
+	height: 23px;
+}
+.content .label_style {
+	padding-right: 10px; padding-left: 22px; display: inline-block; position: relative; cursor: pointer;
+}
+.content .label_style input {
+	left: 0px; top: 0px; position: absolute;
+}
+.content .disable {
+	background: rgb(235, 235, 228);
+}
+.green_color {
+	color: rgb(78, 148, 73);
+}
+.orange_color {
+	color: rgb(236, 92, 39);
+}
+.content .bt_style {
+	background: url("../../imges/movie/user_center/bt_bg.png") no-repeat right -29px; height: 29px; padding-right: 7px; display: inline-block;
+}
+.content .bt_style span {
+	background: url("../../imges/movie/user_center/bt_bg.png") no-repeat left top; padding: 9px 10px 0px 17px; height: 20px; color: rgb(255, 255, 255); line-height: 100%; float: left; display: block; white-space: nowrap; cursor: pointer;
+}
+.content .bt_style1 {
+	background: url("../../imges/movie/user_center/bt_bg1.png") no-repeat right -29px; height: 29px; padding-right: 7px; display: inline-block;
+}
+.content .bt_style1 span {
+	background: url("../../imges/movie/user_center/bt_bg1.png") no-repeat left top; padding: 9px 10px 0px 17px; height: 20px; color: rgb(0, 0, 0); line-height: 100%; float: left; display: block; white-space: nowrap; cursor: pointer;
+}
+.content .top {
+	vertical-align: top;
+}
+.content .user_center_path a {
+	color: rgb(0, 0, 0);
+}
+.content .user_center_path a {
+	color: rgb(144, 144, 144); text-decoration: none;
+}
+.content .user_center_path a:hover {
+	color: rgb(93, 182, 224);
+}
+.content .user_center_path a.current {
+	color: rgb(0, 0, 0);
+}
+.content .user_center_content {
+	margin-top: 15px; margin-bottom: 20px;
+}
+.content .user_center_nav {
+	background: rgb(255, 255, 255); border: 1px solid rgb(223, 226, 221); width: 185px; float: left;
+}
+.content .user_center_nav .title {
+	background: rgb(242, 242, 242); margin: 10px; color: rgb(144, 144, 144); line-height: 40px; font-family: "微软雅黑"; font-size: 16px; font-style: normal; font-weight: bold; border-bottom-color: rgb(223, 226, 221); border-bottom-width: 1px; border-bottom-style: solid; display: block; position: relative;
+}
+.content .user_center_nav .title img {
+	width: 165px; height: 150px;
+}
+.content .user_center_nav div {
+	padding: 0px 30px; height: 38px; line-height: 38px;
+}
+.content .user_center_nav div.split {
+	margin: 10px 0px 0px; height: 0px; padding-bottom: 10px; border-top-color: rgb(229, 232, 228); border-top-width: 1px; border-top-style: solid;
+}
+.content .user_center_nav div.current {
+	background: rgb(93, 182, 224);
+}
+.content .user_center_nav div a {
+	color: rgb(144, 144, 144); text-decoration: none;
+}
+.content .user_center_nav div a:hover {
+	color: rgb(93, 182, 224);
+}
+.content .user_center_nav div.current a {
+	color: rgb(255, 255, 255); font-weight: bold;
+}
+.content .user_center_main {
+	padding: 10px 20px; border: 1px solid rgb(223, 226, 221); margin-left: 196px; background-color: rgb(255, 255, 255);
+}
+.content .user_center_main_bottom {
+	padding: 10px 20px; border: 1px solid rgb(223, 226, 221); margin-top: 9px; margin-left: 196px; background-color: rgb(255, 255, 255);
+}
+.content .user_center_title {
+	background: url("../image/line.png") repeat-x left bottom; height: 58px; color: rgb(0, 0, 0); font-family: "微软雅黑"; font-size: 18px; margin-bottom: 15px; position: relative;
+}
+.content .user_center_title span {
+	height: 44px; padding-top: 22px; padding-left: 72px; display: block;
+}
+.content .user_center_title .personal_data_icon {
+	background: url("../../imges/movie/user_center/personal_data_icon.png") no-repeat 20px 10px;
+}
+.content .user_center_title .order_icon {
+	background: url("../../imges/movie/user_center/order_icon.png") no-repeat 20px 15px;
+}
+.content .user_center_title .comment_icon {
+	background: url("../../imges/movie/user_center/comment_icon.png") no-repeat 24px 12px;
+}
+.content .user_center_title .points_icon {
+	background: url("../../imges/movie/user_center/points_icon.png") no-repeat 20px 12px;
+}
+.content .user_center_title .privilege.points_icon {
+	background: url("../../imges/movie/user_center/privilege.png") no-repeat 24px 12px;
+}
+.content .user_center_title .gift_box_icon {
+	background: url("../../imges/movie/user_center/gift_box_icon.png") no-repeat;
+}
+.content .user_center_title .membership_card_icon {
+	background: url("../../imges/movie/user_center/membership_card_icon.png") no-repeat 20px 15px;
+}
+.content .user_center_title .change_password_icon {
+	background: url("../../imges/movie/user_center/change_password_icon.png") no-repeat 22px 17px;
+}
+.content .user_center_title .binding_setting_icon {
+	background: url("../../imges/movie/user_center/binding_setting_icon.png") no-repeat 24px 16px;
+}
+.content .user_center_title .suggest_icon {
+	background: url("../../imges/movie/user_center/suggest.png") no-repeat 20px 10px;
+}
+.content .user_center_title .homeIco.suggest_icon {
+	background: url("../image/homeico.png") no-repeat 20px 10px;
+}
+.content .user_center_title div.tool_box {
+	top: 5px; right: 5px; font-size: 12px; position: absolute;
+}
+.content .bank_title {
+	background: url("../image/line.png") repeat-x left bottom; height: 28px; color: rgb(0, 0, 0); font-family: 黑体; font-size: 18px; margin-bottom: 15px;
+}
+.content .user_center_tabnav {
+	margin-bottom: 20px; border-bottom-color: rgb(93, 182, 224); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.content .user_center_tabnav a {
+	padding: 9px 25px 5px; height: 17px; color: rgb(255, 255, 255); letter-spacing: 3px; font-size: 14px; margin-bottom: -1px; display: inline-block; cursor: pointer; background-color: rgb(93, 182, 224);
+}
+.content .user_center_tabnav a:hover {
+	text-decoration: none;
+}
+.content .user_center_tabnav a.current {
+	border-width: 1px; border-style: solid; border-color: rgb(93, 182, 224) rgb(93, 182, 224) rgb(255, 255, 255); padding: 8px 24px 4px; color: rgb(93, 182, 224); font-weight: bold; background-color: rgb(255, 255, 255);
+}
+.content .user_center_tabnav_out {
+	position: relative;
+}
+.content .user_center_tabnav_out div.tool_box {
+	top: 5px; right: 5px; position: absolute;
+}
+.content .user_center_tabnav_out div.tool_box a {
+	color: rgb(236, 92, 39);
+}
+.content .user_center_tabnav_out div.tool_box a.add {
+	color: rgb(93, 182, 224);
+}
+.content .user_center_tabnav_out div.tool_box a.add:hover {
+	text-decoration: none;
+}
+.content .user_center_trnav {
+	color: rgb(0, 0, 0); border-bottom-color: rgb(181, 181, 181); border-bottom-width: 1px; border-bottom-style: dashed;
+}
+.content .user_cneter_brnav_backcolor {
+	background: 0px 0px rgb(93, 182, 224);
+}
+.content .order_tabInfo {
+	
+}
+.content .personal_data_tabInfo {
+	padding-bottom: 50px;
+}
+.content .personal_data_tabInfo .pic_box {
+	float: left;
+}
+.content .personal_data_tabInfo .notice_info {
+	color: rgb(236, 92, 39); padding-bottom: 10px; padding-left: 20px;
+}
+.content .table_form {
+	text-align: left; margin-bottom: 20px; margin-left: 15px; float: left;
+}
+.content .table_form th {
+	padding: 10px 5px 7px 0px; width: 150px; color: rgb(0, 0, 0); line-height: 24px; font-size: 14px; vertical-align: middle;
+}
+.content .table_form td {
+	padding: 8px 5px 5px 0px; vertical-align: middle;
+}
+.content .table_form a {
+	color: rgb(93, 182, 224); padding-left: 10px;
+}
+.content .tools_box {
+	text-align: center; clear: both;
+}
+.content .table_order_title {
+	margin: 10px 0px; border: 1px solid rgb(224, 227, 222); width: 100%;
+}
+.content .table_order_title thead th {
+	background: url("../../imges/movie/user_center/order_table_title.png") repeat-x; padding: 9px 5px 7px;
+}
+.content .table_order_item {
+	width: 100%; margin-bottom: 5px; border-top-color: rgb(224, 227, 222); border-left-color: rgb(224, 227, 222); border-top-width: 1px; border-left-width: 1px; border-top-style: solid; border-left-style: solid;
+}
+.content .table_order_item thead th {
+	background: rgb(242, 242, 242); padding: 15px 5px 12px; border-right-color: rgb(224, 227, 222); border-bottom-color: rgb(224, 227, 222); border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid;
+}
+.content .table_order_item tbody td {
+	background: rgb(255, 255, 255); padding: 10px 5px 15px; text-align: center; border-right-color: rgb(224, 227, 222); border-bottom-color: rgb(224, 227, 222); border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid;
+}
+.content .table_order_item tbody td.tools_box a {
+	padding: 2px 0px; display: block;
+}
+.content .table_order_item tbody td.tools_box1 a {
+	
+}
+.content .table_order_item .no-right {
+	text-align: left; border-right-color: currentColor; border-right-width: 0px; border-right-style: none;
+}
+.content .table_order_item thead th span.left_time {
+	color: rgb(46, 146, 207);
+}
+.content .table_order_item tbody td .order_info {
+	border: 0px currentColor;
+}
+.content .table_order_item tbody td .order_info td {
+	border: 0px currentColor; text-align: left; line-height: 200%;
+}
+.content .table_order_item tbody td .order_info td em {
+	color: rgb(0, 0, 0);
+}
+.content .table_comment {
+	width: 100%; margin-bottom: 10px; border-top-color: rgb(223, 226, 221); border-top-width: 1px; border-top-style: solid;
+}
+.content .table_comment th {
+	background: rgb(242, 242, 242); padding: 15px 10px 12px; border-bottom-color: rgb(223, 226, 221); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.content .table_comment th span {
+	color: rgb(236, 92, 39);
+}
+.content .table_comment td {
+	background: rgb(255, 255, 255); padding: 20px 30px; line-height: 200%;
+}
+.content .table_point {
+	width: 100%; margin-bottom: 10px; border-top-color: rgb(225, 228, 223); border-left-color: rgb(225, 228, 223); border-top-width: 1px; border-left-width: 1px; border-top-style: solid; border-left-style: solid;
+}
+.content .table_point th {
+	background: rgb(242, 242, 242); padding: 15px 10px 12px; border-right-color: rgb(225, 228, 223); border-bottom-color: rgb(225, 228, 223); border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid;
+}
+.content .table_point td {
+	background: rgb(255, 255, 255); padding: 15px 10px 12px; text-align: center; border-right-color: rgb(225, 228, 223); border-bottom-color: rgb(225, 228, 223); border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid;
+}
+.content .membership_card_info {
+	padding: 10px 0px 20px; color: rgb(51, 51, 51); font-family: 微软雅黑; font-size: 13px; font-style: normal; font-weight: normal; text-decoration: none;
+}
+.content .membership_card_out {
+	
+}
+.content .membership_card_pad {
+	background: rgb(255, 255, 255); padding: 30px; border: 1px solid rgb(198, 229, 220); margin-bottom: 20px;
+}
+.content .table_membership_card {
+	margin: 0px auto 10px; position: relative;
+}
+.content .table_membership_card th {
+	padding: 10px; text-align: right; line-height: normal; font-size: 13px;
+}
+.content .table_membership_card td {
+	padding: 10px; line-height: normal; font-size: 13px;
+}
+.content .membership_card_pad .table_bank th {
+	padding: 15px 5px 13px; text-align: left;
+}
+.content .membership_card_pad .table_bank td {
+	padding: 15px 15px 13px 5px; text-align: left;
+}
+.content .membership_card_pad .tool_box {
+	text-align: center; padding-top: 20px;
+}
+.content .recharge_success_div {
+	padding: 50px 0px; text-align: center; color: rgb(236, 92, 39); font-family: "微软雅黑"; font-size: 18px; font-weight: bold;
+}
+.content .tool_box1 {
+	text-align: right;
+}
+.content .binding_setting_box {
+	padding: 10px 30px; position: relative;
+}
+.content .binding_setting_info {
+	color: rgb(0, 0, 0); line-height: 200%; margin-bottom: 30px;
+}
+.index_no {
+	background: rgb(93, 182, 224); margin: 0px 3px 0px 5px; padding: 0px 5px; border-radius: 100%; color: rgb(255, 255, 255);
+}
+.content .binding_setting_info #index1 {
+	background: rgb(93, 182, 224); margin: 0px 3px 0px 5px; padding: 0px 5px; border-radius: 100%; color: rgb(255, 255, 255);
+}
+.content .binding_setting_info #index2 {
+	background: rgb(93, 182, 224); margin: 0px 3px 0px 5px; padding: 0px 5px; border-radius: 100%; color: rgb(255, 255, 255);
+}
+.content .binding_setting_site td {
+	border: 1px solid rgb(93, 182, 224); width: 120px; text-align: center; color: rgb(55, 98, 132);
+}
+.content .binding_setting_site td div {
+	background: rgb(93, 182, 224); height: 24px; color: rgb(255, 255, 255); line-height: 24px;
+}
+.content .binding_setting_site td a {
+	color: rgb(255, 255, 255);
+}
+.content .binding_setting_site td a.gray {
+	color: rgb(144, 144, 144);
+}
+.content .binding_setting_site th {
+	width: 60px;
+}
+.content .bind_setting_pop {
+	background: rgb(255, 255, 255); margin: 0px auto; border: 3px solid rgb(144, 144, 144); top: 100px; width: 380px; position: absolute;
+}
+.content .bind_setting_pop_title {
+	background: rgb(228, 242, 235); padding: 10px 0px 7px; text-align: center; color: rgb(73, 148, 133);
+}
+.content .bind_setting_pop_content {
+	padding: 20px; text-align: center;
+}
+.content .bind_setting_pop_tool {
+	text-align: center; padding-bottom: 15px;
+}
+.content .bind_setting_bt1 {
+	background: rgb(78, 175, 156); border: 1px solid rgb(88, 88, 88); width: 53px; height: 21px; text-align: center; color: rgb(255, 255, 255); line-height: 21px; display: inline-block;
+}
+.content .bind_setting_bt2 {
+	background: rgb(255, 255, 255); border: 1px solid rgb(88, 88, 88); width: 53px; height: 21px; text-align: center; color: rgb(144, 144, 144); line-height: 21px; display: inline-block;
+}
+.content .table_suggest {
+	border: 1px solid rgb(223, 226, 221); width: 100%; margin-bottom: 10px;
+}
+.content .table_suggest th {
+	background: rgb(242, 242, 242); padding: 15px 10px 12px; border-bottom-color: rgb(223, 226, 221); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.content .table_suggest td {
+	background: rgb(255, 255, 255); padding: 20px 30px; line-height: 100%;
+}
+.content .table_suggest td .question {
+	color: rgb(51, 51, 51);
+}
+.content .table_suggest td .answer {
+	
+}
+.content .user_index_logo {
+	width: 126px; float: left;
+}
+.content .user_index_logo .user_index_set1 {
+	line-height: 200%; padding-top: 10px;
+}
+.content .user_index_info .user_index_set2 {
+	line-height: 200%; padding-top: 10px;
+}
+.content .user_index_logo a {
+	color: rgb(55, 98, 132);
+}
+.content .user_index_info {
+	margin-left: 136px;
+}
+.content .user_index_phone {
+	background: rgb(255, 242, 206); border: 1px solid rgb(255, 214, 161); height: 124px; text-align: center; line-height: 124px; font-family: "微软雅黑";
+}
+.content .user_index_info span {
+	color: rgb(239, 112, 61); font-size: 18px;
+}
+.content .user_index_info a {
+	color: rgb(55, 98, 132);
+}
+.content .bind_phone_info {
+	padding: 20px 0px 30px 20px; color: rgb(236, 92, 39);
+}
+.content .bind_phone_step1 {
+	background: rgb(228, 242, 235); border: 1px solid rgb(204, 231, 223); margin-bottom: 30px;
+}
+.content .bind_phone_step1 th {
+	padding: 30px; color: rgb(73, 148, 133); font-family: Arial; font-size: 24px; font-weight: bold;
+}
+.content .bind_phone_step1 td {
+	padding: 30px 5px; color: rgb(73, 148, 133);
+}
+.content .bind_phone_step2 {
+	background: rgb(242, 242, 242); border: 1px solid rgb(221, 222, 221);
+}
+.content .bind_phone_step2 th {
+	padding: 30px; color: rgb(144, 144, 144); font-family: Arial; font-size: 24px; font-weight: bold;
+}
+.content .bind_phone_step2 td {
+	padding: 30px 5px; color: rgb(144, 144, 144);
+}
+.user_center_nav div {
+	font-size: 14px;
+}
+.set_attention_sub {
+	height: 32px; line-height: 32px; float: left; display: inline-block;
+}
+a.btn2 {
+	padding: 2px 5px; height: 24px; font-size: 12px; display: inline-block;
+}
+button.btn2 {
+	padding: 2px 5px; height: 24px; font-size: 12px; display: inline-block;
+}
+input.btn2 {
+	padding: 2px 5px; height: 24px; font-size: 12px; display: inline-block;
+}
+#uploadPic {
+	width: 300px; cursor: pointer;
+}
+#pic {
+	width: 126px; height: 126px;
+}
+#_pic {
+	width: 126px; height: 126px;
+}
+#_pic {
+	display: none;
+}
+#_save {
+	margin-left: 0px;
+}
+#upload_pic_table tr th {
+	padding: 2px 5px;
+}
+#upload_pic_table tr td {
+	padding: 2px 5px;
+}
+.sex-box li {
+	border: 1px solid rgb(93, 182, 224); width: 92px; height: 24px; text-align: center; line-height: 24px; float: left; cursor: pointer;
+}
+.marriage-box li {
+	border: 1px solid rgb(93, 182, 224); width: 92px; height: 24px; text-align: center; line-height: 24px; float: left; cursor: pointer;
+}
+.children-box li {
+	border: 1px solid rgb(93, 182, 224); width: 92px; height: 24px; text-align: center; line-height: 24px; float: left; cursor: pointer;
+}
+.pg_normal {
+	background: url("../../imges/movie/piaogen.png") no-repeat left top; width: 80px; height: 40px;
+}
+.pg_like {
+	background: url("../../imges/movie/piaogen_xihuan.png") no-repeat left top; width: 80px; height: 40px;
+}
+.pg_hate {
+	background: url("../../imges/movie/piaogen_buxihuan.png") no-repeat left top; width: 80px; height: 40px;
+}
+.unpayhint {
+	color: red; font-weight: 700;
+}
+.moneyhint {
+	color: red;
+}
+.starhint {
+	text-align: center; color: rgb(93, 182, 224);
+}
+#top_user_info {
+	margin: 10px 0px; width: 100%; text-align: left; font-size: 14px; float: left;
+}
+#top_user_info th {
+	padding: 2px 0px; height: 20px; line-height: 20px;
+}
+#top_user_info td {
+	padding: 2px 0px; height: 20px; line-height: 20px;
+}
+#top_user_info th {
+	width: 120px;
+}
+#top_user_info td {
+	width: 240px;
+}
+#update_cinema {
+	padding-left: 10px;
+}
+#piaogen_wrapper {
+	width: 100%; float: left;
+}
+#piaogen_title {
+	width: 100%; float: left;
+}
+#piaogen_list {
+	width: 100%; float: left;
+}
+#comment_list {
+	width: 100%; float: left;
+}
+#piaogen_wrapper {
+	margin: 0px; width: 100%;
+}
+#comment_list {
+	background: url("../../imges/movie/user_center/line.png") repeat-x left top; padding-top: 10px; margin-top: 20px;
+}
+#piaogen_list li {
+	width: 50%; height: 110px; float: left;
+}
+#comment_list li {
+	width: 50%; height: 110px; float: left;
+}
+.pg {
+	width: 300px; height: 61px; position: relative;
+}
+.pg div {
+	float: left;
+}
+.pg_content {
+	line-height: 24px !important; padding-left: 20px !important; margin-top: -5px !important;
+}
+.add_pg {
+	top: -12px; width: 42px; height: 24px; text-align: center; right: -12px; color: yellow; line-height: 24px; vertical-align: middle; position: absolute; z-index: 1; cursor: pointer; background-color: rgb(93, 182, 224);
+}
+.pg_comment_wrapper {
+	left: 0px; top: -10px; width: 100%; float: left; display: none; position: relative; z-index: 2;
+}
+.pg_comment_box {
+	background: rgb(241, 247, 247); width: 100%;
+}
+.pg_comment_box td {
+	padding: 10px 1%;
+}
+.piaogen_type {
+	background: url("../../imges/movie/user_center/line.png") repeat-x left bottom;
+}
+.piaogen_type label {
+	height: 25px; color: rgb(0, 0, 0); font-size: 14px; margin-right: 20px; display: inline-block; cursor: pointer;
+}
+#greyTxt {
+	text-align: right;
+}
+#content {
+	width: 97%; height: 100px; overflow: auto;
+}
+.borderSpan {
+	border-width: medium 14px 15px; border-style: none solid solid; border-color: currentColor transparent rgb(241, 247, 247); top: -15px; width: 0px; height: 0px; position: absolute;
+}
+.leftBorderSpan {
+	border-width: 6px 7px 6px medium; border-style: dashed dashed dashed none; border-color: transparent rgb(0, 0, 0) transparent currentColor; left: -7px; top: 12px; width: 0px; height: 0px; position: absolute;
+}
+.leftFullSpan {
+	border-width: 5px 6px 5px medium; border-style: dashed dashed dashed none; border-color: transparent white transparent currentColor; left: -6px; top: 13px; width: 0px; height: 0px; position: absolute;
+}
+#edit_pic_info {
+	background: url("../../imges/movie/user_center/suggest_icon.png") no-repeat -2px -1px; padding: 0px; width: 35px; height: 35px; right: 5px; bottom: 0px; margin-right: 5px; margin-bottom: 5px; display: block; position: absolute;
+}
+#activate_newcard {
+	color: rgb(93, 182, 224); padding-right: 5px; font-size: 14px; text-decoration: none; float: right;
+}
+#bind_newcard {
+	color: rgb(93, 182, 224); padding-right: 5px; font-size: 14px; text-decoration: none; float: right;
+}
+#bind_newcard b:hover {
+	transition:transform 0.2s ease-in; -webkit-transition: -webkit-transform .2s ease-in; -webkit-backface-visibility: hidden; -moz-transition: -moz-transform .2s ease-in; -o-transition: -o-transform .2s ease-in; -webkit-transform-style: preserve-3d;
+}
+#bind_card {
+	width: 70px; height: 30px; line-height: 30px; font-size: 14px !important; float: left; min-width: 70px;
+}
+#bind_yxcard {
+	width: 70px; height: 30px; line-height: 30px; font-size: 14px !important; float: left; min-width: 70px;
+}
+.card_operation {
+	float: right;
+}
+.card_operation a {
+	padding: 4px 10px; border: 1px solid rgb(93, 182, 224); width: 64px; height: 17px; text-align: center; color: rgb(93, 182, 224); line-height: 17px; font-size: 13px; display: block; cursor: pointer; background-color: rgb(255, 255, 255);
+}
+.card_operation a:hover {
+	color: rgb(255, 255, 255); text-decoration: none !important; background-color: rgb(93, 182, 224);
+}
+.card_operation .card_recharge {
+	border-radius: 5px 5px 0px 0px; border-top-color: rgb(93, 182, 224); border-top-width: 1px; border-top-style: solid;
+}
+#templates {
+	display: none;
+}
+#bind_voucher {
+	color: rgb(0, 0, 0);
+}
+#bind_voucher div {
+	margin: 0px auto; width: 420px; height: 215px; padding-top: 50px;
+}
+#bind_voucher p {
+	letter-spacing: 1px; font-size: 16px;
+}
+#voucher_no {
+	width: 280px;
+}
+.bind_sub {
+	margin-left: 20px;
+}
+#submit_suggest_box .table_form th {
+	width: 120px;
+}
+#submit_suggest_box .table_form textarea {
+	width: 620px; height: 120px;
+}
+#submit_suggest_box #title {
+	width: 638px; height: 23px;
+}
+.pagination {
+	margin-top: 10px; display: block;
+}
+.order_history {
+	float: right;
+}
+.filter_box select {
+	margin-right: 10px;
+}
+.username_div {
+	height: 21px; overflow: hidden;
+}
+#selPic {
+	padding: 0px 25px; color: rgb(102, 102, 102);
+}
+#uploadPhotoBtn {
+	margin-top: 20px; margin-left: 110px;
+}
+#memberPhoto {
+	left: 0px; width: 412px; height: 29px; bottom: 0px; position: absolute; cursor: pointer; opacity: 0;
+}

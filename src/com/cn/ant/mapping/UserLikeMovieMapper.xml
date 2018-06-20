@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cn.ant.dao.UserLikeMovieMapper" >
+  <resultMap id="BaseResultMap" type="com.cn.ant.entity.UserLikeMovie" >
+    <id column="uc_id" property="ucId" jdbcType="INTEGER" />
+    <result column="m_id" property="mId" jdbcType="INTEGER" />
+    <result column="u_id" property="uId" jdbcType="INTEGER" />
+    <result column="uc_state" property="ucState" jdbcType="INTEGER" />
+    <association property="user" resultMap="com.cn.ant.dao.UserMapper.BaseResultMap"></association>
+	<association property="movie" resultMap="com.cn.ant.dao.MovieMapper.BaseResultMap"></association>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    uc_id, m_id, u_id, uc_state
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from ant_user_like
+    where uc_id = #{ucId,jdbcType=INTEGER}
+  </select>
+  
+  <select id="selectByUserId" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    *
+    from ant_user_like l, ant_movie_info m,ant_user_info u
+    where u.u_id = #{uId,jdbcType=INTEGER} and l.u_id=u.u_id and m.m_id=l.m_id
+  </select>
+  
+  <select id="selectByUserIdAndMovieId" resultMap="BaseResultMap" parameterType="com.cn.ant.entity.UserLikeMovie" >
+    select 
+    <include refid="Base_Column_List" />
+    from ant_user_like
+    where u_id = #{uId,jdbcType=INTEGER} and m_id = #{mId,jdbcType=INTEGER}
+  </select>
+  
+  <!-- 统计喜欢率（一个电影的所有喜欢或不喜欢数量） -->
+  <select id="selectMovieAllLike" resultType="java.lang.Integer" parameterType="java.lang.Integer" >
+    select count(*)
+    from ant_user_like
+    where m_id = #{m_id}
+  </select>
+  
+  <select id="selectMovieOnlyLike" resultType="java.lang.Integer" parameterType="java.lang.Integer" >
+    select count(*)
+    from ant_user_like
+    where uc_state = 1 and m_id = #{m_id}
+  </select>
+  
+  
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from ant_user_like
+    where uc_id = #{ucId,jdbcType=INTEGER}
+  </delete>
+  
+  
+  <delete id="deleteByUserIdAndMovieId" parameterType="com.cn.ant.entity.UserLikeMovie" >
+    delete from ant_user_like
+    where u_id = #{uId,jdbcType=INTEGER} and m_id = #{mId,jdbcType=INTEGER}
+  </delete>
+  
+  <insert id="insert" parameterType="com.cn.ant.entity.UserLikeMovie" >
+    insert into ant_user_like (m_id, u_id,uc_state
+      )
+    values (#{mId,jdbcType=INTEGER}, #{uId,jdbcType=INTEGER},#{ucState,jdbcType=INTEGER}
+      )
+  </insert>
+  
+  <update id="updateByPrimaryKey" parameterType="com.cn.ant.entity.UserLikeMovie" >
+    update ant_user_like
+    set m_id = #{m_id,jdbcType=INTEGER},
+      u_id = #{u_id,jdbcType=INTEGER}
+    where uc_id = #{uc_id,jdbcType=INTEGER}
+  </update>
+</mapper>

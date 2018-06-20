@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cn.ant.dao.ServiceNotesMapper" >
+  <resultMap id="BaseResultMap" type="com.cn.ant.entity.ServiceNotes" >
+    <id column="n_id" property="nId" jdbcType="INTEGER" />
+    <result column="a_id" property="aId" jdbcType="INTEGER" />
+    <result column="n_title" property="nTitle" jdbcType="VARCHAR" />
+    <result column="n_content" property="nContent" jdbcType="VARCHAR" />
+    <result column="n_time" property="nTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    n_id, a_id, n_title, n_content, n_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from ant_service_notes
+    where n_id = #{nId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from ant_service_notes
+    where n_id = #{nId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.cn.ant.entity.ServiceNotes" >
+    insert into ant_service_notes (n_id, a_id, n_title, 
+      n_content, n_time)
+    values (#{nId,jdbcType=INTEGER}, #{aId,jdbcType=INTEGER}, #{nTitle,jdbcType=VARCHAR}, 
+      #{nContent,jdbcType=VARCHAR}, #{nTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.cn.ant.entity.ServiceNotes" >
+    insert into ant_service_notes
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="nId != null" >
+        n_id,
+      </if>
+      <if test="aId != null" >
+        a_id,
+      </if>
+      <if test="nTitle != null" >
+        n_title,
+      </if>
+      <if test="nContent != null" >
+        n_content,
+      </if>
+      <if test="nTime != null" >
+        n_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="nId != null" >
+        #{nId,jdbcType=INTEGER},
+      </if>
+      <if test="aId != null" >
+        #{aId,jdbcType=INTEGER},
+      </if>
+      <if test="nTitle != null" >
+        #{nTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="nContent != null" >
+        #{nContent,jdbcType=VARCHAR},
+      </if>
+      <if test="nTime != null" >
+        #{nTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.cn.ant.entity.ServiceNotes" >
+    update ant_service_notes
+    <set >
+      <if test="aId != null" >
+        a_id = #{aId,jdbcType=INTEGER},
+      </if>
+      <if test="nTitle != null" >
+        n_title = #{nTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="nContent != null" >
+        n_content = #{nContent,jdbcType=VARCHAR},
+      </if>
+      <if test="nTime != null" >
+        n_time = #{nTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where n_id = #{nId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.cn.ant.entity.ServiceNotes" >
+    update ant_service_notes
+    set a_id = #{aId,jdbcType=INTEGER},
+      n_title = #{nTitle,jdbcType=VARCHAR},
+      n_content = #{nContent,jdbcType=VARCHAR},
+      n_time = #{nTime,jdbcType=TIMESTAMP}
+    where n_id = #{nId,jdbcType=INTEGER}
+  </update>
+</mapper>

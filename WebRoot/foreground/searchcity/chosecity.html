@@ -1,0 +1,402 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test</title>
+<style type="text/css">
+body{
+	padding:0dp;
+	margin:0dp;
+}
+.cityoverFlow{
+	height:190px;
+	overFlow-y:scroll;  
+	overFlow-x:hidden;  
+}
+.citytype{
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #DDD;
+    padding:10px;
+}
+
+.city_type{
+	display:inline-block;
+	background-color: #DDD;
+	width:40px;
+	height:20px;
+	text-align: center;
+	line-height: 20px;
+	
+}
+.city_name{
+	display:inline-block;
+	margin-bottom:3px;
+	margin-top:5px;
+	padding-left:30px;
+	font-size: 15px;
+	color:#222;
+}
+.city_name_br{
+	display:inline-block;
+	margin-bottom:4px;
+	padding-left:30px;
+	font-size: 15px;
+	color:#222;
+	margin-left:44px;
+}
+a{
+	text-decoration: none;
+	color:#000;
+}
+a:HOVER {
+	color:#03C5FF;
+	text-decoration: underline;
+}
+</style>
+
+<script type="text/javascript">
+ function getCityName(str){
+	 
+	//alert(art.dialog());
+	var city=window.parent.document.getElementById("cityName");
+	city.innerHTML=str;
+	
+	var dialog = top.dialog.get(window);
+	dialog.close();
+	
+} 
+</script>
+</head>
+
+<body>
+<div class="cityoverFlow">
+<div class="citytype">
+	<span class="city_type" >A</span>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">安康</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">安宁</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">安庆</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">鞍山</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">安顺</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">安阳</a>
+	
+</div>
+<div class="citytype">
+	<span class="city_type" >B</span>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">白城</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">百色</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">白山</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">保定</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">宝鸡</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">包头</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">北海</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">北京</a><br/>
+	<a class="city_name_br" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">蚌埠</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">本溪</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">毕节</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">滨州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">亳州</a>
+</div>
+<div class="citytype">
+	<span class="city_type" >C</span>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">沧州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">长春</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">常德</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">昌吉</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">长沙</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">长治</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">常州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">巢湖</a><br/>
+	<a class="city_name_br" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">朝阳</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">潮州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">承德</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">成都</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">郴州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">赤峰</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">池州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">重庆</a><br/>
+	<a class="city_name_br" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">崇左</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">滁州</a>
+</div>
+<div class="citytype">
+	<span class="city_type" >D</span>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">大理</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">大连</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">丹东</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">大庆</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">大同</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">达州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">德阳</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">德州</a><br/>
+	<a class="city_name_br" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">东莞</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">东营</a>
+</div>
+<div class="citytype">
+	<span class="city_type" >E</span>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">鄂州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">鄂尔多斯</a>
+</div>
+<div class="citytype">
+	<span class="city_type" >F</span>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">佛山</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">抚州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">抚顺</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">阜新</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">阜阳</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">福州</a>
+</div>
+<div class="citytype">
+	<span class="city_type" >G</span>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">广元</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">广州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">桂林</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">贵阳</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">赣州</a>
+</div>
+<div class="citytype">
+	<span class="city_type" >H</span>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">合肥</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">海口</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">邯郸</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">杭州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">汉中</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">菏泽</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">河源</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">哈尔滨</a><br/>
+	<a class="city_name_br" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">衡水</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">衡阳</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">湖州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">贺州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">淮安</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">淮北</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">淮南</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">红河州</a><br/>
+	<a class="city_name_br" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">黄冈</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">黄山</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">黄石</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">惠州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">葫芦岛</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">呼和浩特</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">呼伦贝尔</a>
+</div>
+<div class="citytype">
+	<span class="city_type" >J</span>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">吉安</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">江门</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">焦作</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">嘉兴</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">揭阳</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">吉林</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">济南</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">佳木斯</a><br/>
+	<a class="city_name_br" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">荆门</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">荆州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">金华</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">济宁</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">晋江</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">晋中</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">锦州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">景德镇</a><br/>
+	<a class="city_name_br" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">吉首</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">九江</a>
+</div>
+<div class="citytype">
+	<span class="city_type" >K</span>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">开封</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">凯里</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">昆明</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">库尔勒</a>
+</div>
+<div class="citytype">
+	<span class="city_type" >L</span>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">兰州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">莱芜</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">廊坊</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">乐山</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">聊城</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">辽源</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">辽阳</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">连云巷</a><br/>
+	<a class="city_name_br" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">丽江</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">临沧</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">临汾</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">临沂</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">丽水</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">柳州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">龙岩</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">六盘山</a><br/>
+	<a class="city_name_br" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">娄底</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">六安</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">罗定</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">洛阳</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">泸州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">吕梁</a>
+</div>
+<div class="citytype">
+	<span class="city_type" >M</span>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">绵阳</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">茂名</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">眉山</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">梅州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">马鞍山</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">牡丹江</a>
+</div>
+<div class="citytype">
+	<span class="city_type" >N</span>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">南昌</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">南充</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">南京</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">南宁</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">南平</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">南通</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">南阳</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">内江</a><br/>
+	<a class="city_name_br" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">宁波</a>
+</div>
+<div class="citytype">
+	<span class="city_type" >P</span>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">盘锦</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">萍乡</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">普洱</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">莆田</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">攀枝花</a>
+</div>
+<div class="citytype">
+	<span class="city_type" >Q</span>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">青岛</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">钦州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">泉州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">曲靖</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">横州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">秦皇岛</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">齐齐哈尔</a>
+</div>
+<div class="citytype">
+	<span class="city_type" >R</span>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">日照</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">汝州</a>
+</div>
+<div class="citytype">
+	<span class="city_type" >S</span>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">三明</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">三亚</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">上海</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">商洛</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">商丘</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">上饶</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">汕头</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">石河子</a><br/>
+	<a class="city_name_br" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">韶关</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">绍兴</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">邵阳</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">沈阳</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">深圳</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">十堰</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">石狮</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">石家庄</a><br/>
+	<a class="city_name_br" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">四平</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">松原</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">苏州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">宿州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">绥化</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">遂宁</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">宿迁</a>
+</div>
+<div class="citytype">
+	<span class="city_type" >T</span>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">泰安</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">太原</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">台州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">泰州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">唐山</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">天津</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">天水</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">铁岭</a><br/>
+	<a class="city_name_br" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">通化</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">通辽</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">铜陵</a>
+</div>
+<div class="citytype">
+	<span class="city_type" >W</span>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">潍坊</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">威海</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">渭南</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">温州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">乌海</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">武汉</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">芜湖</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">文山州</a><br/>
+	<a class="city_name_br" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">无锡</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">吴忠</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">梧州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">乌鲁木齐</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">乌兰察布</a>
+</div>
+<div class="citytype">
+	<span class="city_type" >X</span>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">厦门</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">西安</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">湘潭</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">襄阳</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">咸宁</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">咸阳</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">孝感</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">西昌</a><br/>
+	<a class="city_name_br" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">邢台</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">西宁</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">新乡</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">信阳</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">新余</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">忻州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">宣城</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">许昌</a><br/>
+	<a class="city_name_br" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">徐州</a>
+</div>
+<div class="citytype">
+	<span class="city_type" >Y</span>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">雅安</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">延安</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">盐城</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">阳江</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">扬州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">延吉</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">烟台</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">宜宾</a><br/>
+	<a class="city_name_br" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">宜昌</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">宜春</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">银川</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">营口</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">义乌</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">益阳</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">宜州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">永州</a><br/>
+	<a class="city_name_br" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">玉林</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">岳阳</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">翰林</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">运城</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">玉溪</a>
+</div>
+<div class="citytype">
+	<span class="city_type" >Z</span>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">枣庄</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">漳州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">湛江</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">肇庆</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">昭通</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">郑州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">镇江</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">张家界</a><br/>
+	<a class="city_name_br" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">中山</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">周口</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">舟山</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">珠海</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">涿州</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">株洲</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">淄博</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">张家口</a><br/>
+	<a class="city_name_br" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">自贡</a>
+	<a class="city_name" href="javascript:void(0)" onclick="getCityName(this.innerHTML)">遵义</a>
+</div>
+</div>
+</body>
+</html>

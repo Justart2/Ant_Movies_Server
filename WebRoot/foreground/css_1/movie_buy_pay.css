@@ -1,0 +1,424 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* css reset */
+.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close{ display: none;}
+a{ text-decoration:none;}
+input[type="text"],input[type="password"]{ line-height:20px; height:20px;}
+
+.content{ width:1002px; margin:20px auto;}
+.content .title{ width:1000px; height:54px; display:block; background:url(../imges/movie/content_title3.jpg) no-repeat top left;}
+.content .title{ width:1000px; height:43px; margin-bottom:20px; display:block;}
+	.content .title a{ float:left; width:26%; height:100%;}
+	.content .title #step1{ background:url(../imges/movie/content_title3.jpg) no-repeat;}
+	.content .title #step2{ background:url(../imges/movie/content_title3.jpg) no-repeat 35% 0%;}
+	.content .title #step3{ background:url(../imges/movie/content_title3.jpg) no-repeat 70% 0%;}
+	.content .title #step4{ background:url(../imges/movie/content_title3.jpg) no-repeat 99% 0%; width:22%;}
+	
+
+.buy{ width:900px; margin:8px 0 20px 0; padding:0 50px 15px 50px;}
+.buy h3,.card h3{width:100%; height:50px; margin:0 auto;line-height:50px; margin-top:20px; margin-bottom:20px;border-bottom:dashed 1px #b5b5b5; padding-left:0;}
+.buy p{ margin:0; width:500px; float:left;}
+.buy p span{ line-height:50px; float:left;}
+.buy p a{ margin:0; float:left;margin:11px 0 0 10px;width:89px; height:29px;float:left;}
+.buy p input{ float:left; margin-top:15px;}
+.buy p #check{ margin:0; margin-left:120px; margin-top:10px;}
+.buy_right{ width:300px; height:168px; float:right; border-left:dashed 1px #b5b5b5; color:#000; padding:0 0 0 20px; line-height:40px;}
+.buy_right span{ font:bold 18px/70px "微软雅黑"; display:block; margin:0 auto; width:200px;}
+.buy_right span span{ color:#ec5c27; display:inline;}
+.card{width:900px; height:100%; margin:20px 0 20px 0;padding:0 50px;}
+.card #box1, .card #box2{ margin: 0; padding: 0; width:100%; float:left;}
+#card_main h3 span{ color:#ec5c27; font-size:12px; float: none; margin: 0;}
+.card #box1 div,.card #box2 div{ background-color:#f2f2f2; width:870px; margin:0 0 20px 0; padding:15px;float:left;}
+.card #box1 .card_content,.card #box2 .card_content{margin: 10px 0px;margin-left: 36px; padding: 0;}
+.card ul{list-style:none;padding:0;margin:0 0 20px 0;}
+.card .no_bg{ background-color:#fff; width:870px; height:100%; margin-bottom:0;}
+.card .no_bg_botoom{background-color:#fff; width:870px; height:100%;  margin-bottom:40px;}
+.card .no_bg a,.card .no_bg_botoom a{ background:url(../imges/movie/card_p_+.jpg) no-repeat top left; float:left; color:#000; font-size:14px; text-decoration:none; line-height:12px;}
+.card div .card_title{ background:url(../imges/movie/card_p_-.jpg) no-repeat top left; float:left; color:#000; font-size:14px; text-decoration:none; line-height:12px;}
+.card div span{ float:left; margin-left:36px; color:#000;}
+.card div .no{ color:#909090; margin-left:0;}
+.card div .no2{ color:#909090; float:left;}
+.card div .use{ background:none; font-size:12px; line-height:24px; margin-left:30px;}
+.card div input{ float:left;padding:2px 5px 2px 5px; margin:0px;}
+.card div fieldset{ float:left;margin:0;padding:14px 36px;border:0;width:800px;height:auto !important;height:24px;min-height:24px; position:relative;}
+.card div .fls_card_used span{padding:0px 40px 0px 10px;margin-left:0;color:#57ACCB; border:0px; border-bottom:1px solid #5DB6E0;} 
+.card div .fls_card_used span b{color:#EC5C27; padding-left:10px;}
+.card div .fls_card_used a{ float:left; padding:0; margin:0;}
+.card div .tab_used{ float:left;padding:0; margin:15px 0px 20px 35px; border:0; text-align:left; border:1px solid #AFE1EC;border-spacing:1px;}
+	.card div .tab_used thead,tbody,tfoot{border:0;padding:0;margin:0;}
+		.card div .tab_used tr th,.card div .tab_used tr td{padding:0 12px;height:30px; line-height:30px; vertical-align:middle;}
+		.card div .tab_used tr th{ background-color:#DCF1F2; color:#57ACCB;}
+		.card div .tab_used tr td{ background-color:#fff;}
+			.card div .tab_used tr td span{ margin:0px;}
+			.card div .tab_used tr td p{padding:0;margin:0; text-align:right;}
+			.card div .tab_used b{ color:#EC5C27;}
+.card div label{ float:left;margin:0px 15px 0px 0px;}
+
+/* 暂时将纸质券隐藏，等日后接口上线后放开；放开步骤：解除第一条注释，删掉第二、三条样式 */
+/*#exticket_main fieldset label{ width:55px; height:60px; line-height:32px; font-size: 14px; margin-right:25px; color: #000;}*/
+#exticket_main fieldset label{ width:55px;}
+#exticket_main .sel-exticket{display: ;}
+
+#goods_exchange_main input[name='voucher_num'], #exticket_main input[name='voucher_num']{width:190px;}
+#card_main .sel-exticket{ float: left; width: 710px; margin: 0;}
+#card_main .sel-exticket{ float: left; width: 710px; margin: 0;}
+#card_main .sel-exticket label{ float: left; width: 84px; height: 32px; cursor: pointer;}
+#card_main .sel-exticket label input{ margin-top: 11px; +margin-top:7px; margin-right: 5px; padding: 0; +zoom:1; cursor: pointer; }
+#card_main .valCode{width:120px; margin-left: 15px; color: #909090; font-size: 12px; font-family: "微软雅黑"; display: none;}
+#card_main .exticket-demo,#card_main .exticket-demo div{ margin: 0; padding: 0; width:auto; height: auto;}
+#card_main .exticket-demo{ width: 42px; height: 24px; position: relative; display: none;}
+#card_main .exticket-demo .exticket-demo-pic{ width:100%; height: 100%;}
+#card_main .exticket-demo .exticket-demo-floatlayer{display: none; position: absolute; top: -50px; left: 45px; z-index: 2; background-color: transparent;}
+#card_main .exticket-demo .exticket-demo-floatlayer div{ border: 1px solid #909090; margin-left: 4px; background-color: #fff;}
+#card_main .exticket-demo .exticket-demo-floatlayer .ss{position: absolute;z-index: 3; top: 58px; left: 0;}
+#card_main .exticket-demo .exticket-demo-floatlayer div img{ width:200px; height: 130px; border: none;}
+#payment_main{ display:none;}
+#card_main .min_height {height:auto !important;height:40px;min-height:40px;}
+#card_main .card_title{background:url(../imges/movie/card_p_+.jpg) no-repeat left top; color:#000; font-size:14px; text-decoration:none; line-height:12px; margin:0 15px;position:relative;height:24px; cursor:pointer; padding-bottom: 2px; padding-left:20px;}
+#card_main a.closed_card{color:#909090;}
+#card_main .card_title_expand{background:url(../imges/movie/card_p_-.jpg) no-repeat left top;}
+#card_main .card_content{ display:none;padding:0;margin:10px 0px;}
+	#card_main .card_content > p{ margin:10px 10px 10px 0; padding:0;}
+#card_main .card_content_close{float:right; color:#909090; background:none; font-size:12px;}
+#card_main .card_content_title{background:url(../imges/movie/card_p_-.jpg) no-repeat top left;margin-top:15px;margin-left:15px;}
+#ex_msg{float:right; color:#909090; background:none; font-size:12px;margin-top:15px;}
+#ex_search{float:right; color:#909090; background:none; font-size:12px;margin-top:15px;}
+.money{ width:1000px; padding:10px 0px; background-color:#ffffff; float:left;}
+.money p,.money span,.money a,.money button{ float:left; height:48px; line-height:48px !important;}
+.money span{ font:bold 20px "微软雅黑";margin:0 auto; display:block; color:#ec5c27;}
+.money p{margin:0 auto; width:110px; margin-left:10px;}
+.money #button_green_confirm , .money #button_green_pay{width:auto; padding:0 30px; height:48px; margin:0 auto; display:block; cursor:pointer; color:#fff; float:right;text-align: center;line-height: 48px;font-size: 20px;font-weight: normal;text-decoration: none;}
+.money #button_green_confirm{margin-right:65px; background:#5DB6E0;}
+
+.money #button_green_useMemCar, .money #button_green_pay{ width:207px; height:48px; margin:0 auto; display:block; cursor:pointer; color:#fff; float:right;text-align: center;line-height: 48px;font-size: 20px;font-weight: normal;text-decoration: none;}
+.money #button_green_useMemCar{  margin-right:65px; background:#5DB6E0;}
+.money .btn-disabled{background-color:#F5F5F5 !important;border:1px solid #B9B9B9 !important;color:#b9b9b9 !important;}
+.money #button_green_pay{ display:none; background:#5DB6E0;}
+.money .ok{ float:left; margin-left:15px; display:none; float:right; line-height:48px; height:48px; margin-right:65px;}
+.seat_msg{width:60px;}
+.no_msg{width:500px;}
+.lackmoney_msg{width:80px;}
+#pay_money{ margin-left:65px; text-align:center;}
+
+/* 支付方式 start */
+.payment{width:900px; height:100%; margin:20px 0 20px 0;padding:0 50px;}
+.payment h3 span{ color:#ec5c27; font:normal 12px "微软雅黑";}
+.payment p{ background-color:#f2f2f2; width:870px; margin:0 0 20px 0; padding:15px;float:left;}
+.payment .no_bg{ background-color:#fff; width:870px; height:100%; margin-bottom:0;}
+.payment .no_bg_botoom{background-color:#fff; width:870px; height:100%;  margin-bottom:40px;}
+.payment .no_bg a,.payment .no_bg_botoom a{ background:url(../imges/movie/card_p_+.jpg) no-repeat top left; float:left; color:#000; font-size:14px; text-decoration:none; line-height:12px;}
+.payment p a{ background:url(../imges/movie/card_p_-.jpg) no-repeat top left; float:left; color:#000; font-size:14px; text-decoration:none; line-height:12px;}
+.payment p span{ float:left; margin-left:36px;color:#376284;}
+.payment p .no{ color:#909090; line-height:50px;}
+.payment p .no2{ color:#909090; line-height:50px; float:left;}
+.payment p .use{ background:none; font-size:12px; color:#376284; line-height:24px; display:block; margin-left:30px;}
+/* 支付方式 end */
+
+/* button  start */
+#button_orange_give{background:url(../imges/movie/give.jpg) no-repeat; }
+#button_orange_give2{background:url(../imges/movie/give2.jpg) no-repeat; margin-right:60px;}
+.card .button_orange_use{ float:left; margin-left:15px; width:72px; height:29px;}
+#decrease_num{ float:left; height:14px; line-height:20px; width:14px; text-align:center; display:block; cursor:pointer; margin:18px 50px 7px 3px;background:url(../imges/movie/decrease_num.jpg) no-repeat;}
+#increase_num{float:left; height:14px; line-height:20px; width:14px; text-align:center; display:block; cursor:pointer; margin:18px 50px 7px 3px; background:url(../imges/movie/increase_num.jpg) no-repeat;}
+/* button  end */
+
+/*aashy_tab start*/
+ol li { margin: 3px;}
+#con {width:900px; margin-top:20px; height:100%; margin-bottom:20px;}
+#payment_tabs { width:900px; margin:0; HEIGHT:34px; font:14px/32px "微软雅黑"; padding:0px; overflow:hidden; background:url(../imges/movie/tagsbg_buy.jpg) repeat-x 0 33px;}
+#payment_tabs li { background-color:#f2f2f2; FLOAT: left; margin-right:5px; border:#dfe2dd 1px solid; border-bottom:none; LIST-STYLE-TYPE: none; HEIGHT:32px; width:198px; text-align:center; display:block; cursor: pointer;color:#000;}
+#payment_tabs li:hover{ color:#000;}
+#payment_tabs li.selectTag, #payment_tabs li:hover,#payment_tabs li:visited { background-color:#fff; border-bottom:#fff 2px solid;}
+#tagContent{ border:#dfe2dd 1px solid; border-top:0; BACKGROUND-COLOR: #fff; font:12px/18px "微软雅黑"; color:#909090;HEIGHT:100%; width:874px; padding:40px 12px 40px 12px;}
+.tagContent{ WIDTH:874px; COLOR:#909090; HEIGHT:100%;}
+.tagContent ul{ width: 740px; padding:0; margin-bottom:0;}
+.tagContent .buy_pay_ul{ height:57px;}
+.tagContent #dont{ width:483px; height:96px; float:right; background-color:#f2f2f2; font:normal 14px/96px "微软雅黑"; color:#000; text-align:center;}
+.tagContent ul li{ width:184px; height:57px; float:left; list-style-type:none;}
+.tagContent ul li input{ margin-top:14px; float:left; margin-right:10px; margin-left:5px;}
+.tagContent ul li label{ float:left;}
+#tagContent div.selectTag {display: block;}
+#kuaijie_main{ line-height:40px;}
+#tagContent ul li label img{ border:1px #909090 solid;}
+#tagContent ul li label img:hover{ border:2px #5db6e0 solid;}
+#tagContent ul li label img:active{ border:2px #5db6e0 solid;}
+#bank_main{ line-height:40px;}
+#bank_main, #member_card_main, #mobile_main{display:none;}
+#bank_main .buy_pay_ul li{width:194px;}
+#member_card_main #password_img{margin:2px 0 0 0;width:110px;}
+#member_card_main img{ float:right; margin:2px 0 0 3px;}
+#member_card_main #no_clear{float:right; margin:8px 69px 0 0;}
+
+.more_yh{ display:none;}
+.shouqi_yh,.zhankai_yh{ display:block; color:#909090; display:block; text-align:right; margin-top:-38px;}
+.shouqi_yh{ display:none; margin-right:80px;}
+.zhankai_yh{ display:block; margin-right:60px;}
+/* aashy_tab end */
+
+/*接收影票的手机号码*/
+#mobile_no{font-size:16px;color:#EC5C27;}
+
+/*支付时弹出框*/
+.pay_failed{ display:none;}
+
+/* 储值(会员)卡 样式 */
+#member_card_tip {padding:0; color:#EC5C27; float:none; margin: 0 -12px; line-height:26px; height:26px; vertical-align: middle;}
+#bind_card_list, #other_card_wrapper{ margin:0 -12px;}
+#bind_card_list, #bind_card_list li{ width:auto; height:auto; float:none; display:block;}
+#bind_card_list li, #other_card_wrapper{ padding:10px 20px;}
+.card_focus{ background-color:#F2F2F2; }
+#bind_card_list input,#other_card_tab input{ margin:0; padding:0; float:none; margin-right:5px; padding-left: 5px;}
+.use_bindcard, .use_othercard{ line-height:32px;}
+.sms_step, .use_bindcard{ display:none;}
+.sms_step{color: #5db6e0; line-height:24px;}
+#other_card_tab{ display:none; margin:0 auto; width: 450px;}
+#other_card_tab th,#other_card_tab td{ vertical-align:top; font-weight:normal; color:#000000;}
+#other_card_tab th{ font-size:14px; width: 100px;}
+#other_card_tab td{width: 650px;}
+.pass_step, #other_card_no, #other_card_pass{ height:24px; width:200px;}
+.pass_step{ float:left;}
+.bind_card_pass_lab > a{ float:left;}
+.sel_step{ height:24px; margin-right:10px;}
+.other_card_lab,.bind_card_content{ font-size:14px; float:none !important; display: block; padding:15px 0; color:#000;}
+.other_card_check{ margin-right:10px !important;}
+.bind_card_no, .bind_card_price{ margin-left:2px; margin-right:15px;}
+.bind_card_pass_lab, .sms_step{ display:none;}
+.bind_card_pass_lab{ font-size:14px; color:#000000; margin-left:25px;}
+#bind_card_list li  label{float: none;display: inline-block;}
+#other_card_subbtn{margin-top:20px;}
+#used_div{padding:20px 0;background-color:#fff;border:#DFE2DD solid 1px; margin:10px 20px; padding-left:80px;display: none;}
+.bindcard_tip{padding:20px 0;background-color:#fff;border:#DFE2DD solid 1px; margin:10px 20px; padding-left:80px; margin-top: 0;display: none;}
+/* 下拉菜单css */
+.items_btn{ background:url(../imges/movie/trade/items_normal.jpg) no-repeat 1px 1px; width:19px; height:24px; position:absolute; z-index:1; top:16px; right:553px; cursor: pointer;}
+.items_btn:hover{ background:url(../imges/movie/trade/items_hover.jpg) no-repeat 1px 1px;}
+.imtes_btn:active{ background:url(../imges/movie/trade/items_active.jpg) no-repeat 1px 1px;}
+.items_list{ position:absolute; top:41px; left:96px; z-index:2; cursor:pointer; padding:0; margin:0; width:auto; height:auto; border:#DFE2DD 1px solid; display:none;}
+.items_list li{ display:block; padding:5px 15px;background-color:#ffffff; min-width:193px;}
+.items_list li:hover{ background-color:#DCF1F2;}
+.items_list li span{ padding:0; margin:0; float:none; color:#909090;}
+
+/* 使用后的会员卡样式*/
+#memcard-list-wrap{ 
+	padding:10px 8px;
+	text-align: center; 
+	color: #000;
+	font-size:14px;
+	display: none;
+}
+#memcard-list-wrap table{
+	text-align: center; 
+	width:100%;
+}
+#memcard-list-wrap table thead th,#memcard-list-wrap table tbody td{
+	padding:5px;
+	border: 1px solid #afe1ec;
+}
+#memcard-list-wrap table thead th{ 
+	background-color:#DCF1F2;
+	font-size: 16px;
+	font-weight: normal;
+}
+#memcard-list-wrap table tbody td{ 
+	font-weight: bold;
+}
+#memcard-list-wrap p{
+	line-height: 70px; 
+	height: 70px; 
+	float: none;
+	width: auto;
+	background: #fff;
+	float: none;
+	margin: 0px;
+	padding:0px;
+	float: none;
+}
+#memcard-list-wrap table tfoot td a{
+	float:right;
+	margin:5px;
+}
+#memcard-list-wrap .tip {
+	color:red;
+}
+#memcard-list-wrap .mem-tip{ 
+	position: relative;
+}
+#memcard-list-wrap .mem-tip b{ 
+	font-size: 34px; 
+	line-height: 34px; 
+	height: 34px; 
+	width: 34px; 
+	position: absolute; 
+	z-index: 2; 
+	left: 280px; 
+	top: -10px;
+}
+#memcard-list-wrap #toCardRecharge{
+	float: none;
+	background: none;
+}
+
+/* payTipDialog start */
+	#pay_tip_dialog{ display:none; color:#000;}
+	#pay_tip_dialog img{ float: left;margin-right: 20px;}
+	#pay_tip_dialog .attention_edit_title{ padding:2px 10px; background-color:#dcf1f2;}
+	#pay_tip_dialog .attention_edit_title span{ color:#EC5C27;}
+	#pay_tip_dialog .attention_edit_main{ font-size:14px; color:#000000; height:auto; line-height:60px; padding-left:1%;}
+	#pay_tip_dialog .set_attention_sub{ padding:0px 10px; float:left; margin-left:20%;}
+	#pay_ok, #pay_faild{ margin-top:15px; padding:10px 25px; padding-right:0; line-height:50px;}
+	.sel_cause,.pay_ok_opration{ margin-left:20px; width:420px;}
+	.pay_faild_opration{ padding-left:21px; margin:0; line-height:12px;display: inline;}
+	.pay_ok_opration a, .pay_faild_opration a{ padding:0 20px 0 10px;}
+	.commit_cause{ display:none; margin-left:146px; min-width:50px; width:50px; height:30px; line-height:30px; font-size:14px !important;}
+/* payTipDialog end */
+
+.countdown{ font-weight:normal;}
+
+/*-------- 查询兑换码弹出框  --------*/
+.errinfo {color: #F30;padding: 3px 0px 3px 0px;}
+.errinput {border: 2px solid #21A9DD;}
+.voucher_dialog {display: none;}
+.voucher_dialog table tr td {text-align: left;height: 26px;}
+.voucher_dialog table tr th {text-align:right; width: 180px;}
+.voucher_dialog .prompt {color:red;}
+.voucher_dialog .set_attention_sub {margin-top:20px; float:left !important;}
+
+#card_main .tab_used thead th{ text-align: center;}
+#exticket_main .tab_used tbody td{border:1px solid #AFE1EC !important;text-align: center;}
+#exticket_main .tab_used .no_msg{border-right:none !important; width:400px;}
+#exticket_main .tab_used .operation_msg{border-left:none !important;}
+#card_main .tab_used tfoot tr{ text-align: right;}
+#coupons_main .tab_used tbody td{border:1px solid #AFE1EC !important;text-align: center;}
+#goods_exchange_main .tab_used tbody td{border:1px solid #AFE1EC !important;text-align: center;}
+#goods_cash_main .tab_used tbody td{border:1px solid #AFE1EC !important;text-align: center;}
+
+/*--------积分--------*/
+#currentIntegral,#needIntegral{padding-left:20px; padding-right:80px;}
+
+/*------- 蚌埠活动 ------------*/
+#bengbu_main span{ margin-bottom: 12px;}
+#bengbu_main span span{ line-height: 19px; margin-bottom: 0;}
+.bengbu_chbox{margin: 10px 20px 0 0 !important;}
+.bank_psbc{ float: left;}
+.bengbu_tit{color: #FF0000 !important;}
+
+/*------- 蚌埠活动 ------------*/
+
+/*------- 支付页面显示已使用的优惠信息 ------------*/
+#cancelDiscountDiv{height: 55px; line-height: 55px; color: #fff;font-size: 20px; background-color: #5db6e0; text-align: center;}
+#cancelDiscount{margin-left: 200px; vertical-align: middle;}
+
+/*--------------- 电子优享卡 ---------------*/
+#xn_card_wrapper{ width:auto; padding:14px 36px; margin: 0; width:798px;}
+#xn_card_list{margin: 0; border-top: 1px dashed #909090;}
+#xn_card_list li{ float: left; margin: 2px 0; margin-right: 20px;}
+#xn_card_list li input{ display: inline-block; height:39px; float: left; cursor: pointer;}
+#xn_card_list li a{width:131px; height:39px; line-height:39px; margin-left:4px; margin-right:12px; color:#222; overflow:hidden; float:left; text-decoration:none; font-size:14px;
+					position: relative; top:0; left:0;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+#xn_card_list li a:hover{text-decoration:none;}
+#xn_card_wrapper h2{width:auto; height:auto; margin: 0; padding: 0; border: none; font-size: 14px;text-align: left; font-weight: normal;}
+
+.share_bottom_icon{ width:25px; height:25px; position:absolute; bottom:0; right:10px; background:url(../imges/movie/share_bottom_icon.png) left top; display:none;}
+.share_bottom_icon_checked{ display:block !important;}
+
+/*虚拟优享卡-银行列表test*/
+#zs-xncard{background-image:url(../imges/movie/trade/zs-xncard-normal.png);}
+#zs-xncard:active{ top:1px; left:1px;}
+
+#zs-xncard2{background-image:url(../imges/movie/trade/zs-xncard-normal.png);}
+#zs-xncard2:active{ top:1px; left:1px;}
+
+#zs-xncard3{background-image:url(../imges/movie/trade/zs-xncard-normal.png);}
+#zs-xncard3:active{ top:1px; left:1px;}
+
+/*---------------------- 兑换码、礼券使用优化 begin  add by suicl at 2013/5/21 --------------------*/
+/* 兑换码选择框 */
+#exticket_main .coupons_select_box { 
+	display: none;
+	cursor: default; font-size : 12px;
+	color: #000000;
+	width: 420px;
+	height: auto;
+	border: 1px solid #5DB6E0;
+	background-color: #ffffff;
+	font-size: 12px;
+	position: absolute;
+	left:96px;
+	top:42px;
+	z-index: 20;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+#exticket_main .coupons_box_icon{
+	display: block;
+	cursor: pointer;
+	width: 22px;
+	height: 20px;
+	float: left;
+	position: relative;
+	top: 3px;
+	right: 23px;
+	background: url("../imges/movie/trade/select_icon_normal.png") no-repeat center center;
+}
+/* 礼券选择框 */
+#gift_select_box { 
+	display: none;
+	cursor: default; font-size : 12px;
+	color: #000000;
+	width: 420px !important;
+	height: auto;
+	border: 1px solid #5DB6E0;
+	background-color: #ffffff;
+	font-size: 12px;
+	position: absolute;
+	left:111px;
+	top:42px;
+	z-index: 20;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+#gift_box_icon{
+	display: block;
+	cursor: pointer;
+	width: 22px;
+	height: 20px;
+	float: left;
+	position: relative;
+	top: 3px;
+	right: 23px;
+	background: url("../imges/movie/trade/select_icon_normal.png") no-repeat center center;
+}
+#card_box_icon{
+	display: block;
+	cursor: pointer;
+	width: 22px;
+	height: 20px;
+	float: left;
+	position: absolute;
+	top: 5px;
+	left: 210px;
+	background: url("../imges/movie/trade/select_icon_normal.png") no-repeat center center;
+	margin-left: -25px;
+}
+/* 兑换码、礼券选择框通用 */
+.coupons_tr {
+	line-height:20px;
+	height:30px;
+}
+.coupons_tr:hover{
+	background-color: #5DB6E0;
+}
+.coupons_tr:hover span{
+	color: #FFFFFF;
+}
+/*---------------------- 兑换码、礼券使用优化 end --------------------*/
+#card_select_box {padding: 3px; display: none; cursor: default; border: 1px solid #5DB6E0; font-size: 12px; background-color: #FFFFFF; z-index: 2; position: absolute; top:32px; left:0;}
+#card_select_box table tr {line-height: 22px}
+#card_select_box table :hover{
+	background-color: #5DB6E0;
+}
+#card_select_box table :hover span{
+	color: #FFFFFF;
+}
+
+.goodsInfo{color:#ec5c27; display: inline; font-weight: bold;}

@@ -1,0 +1,138 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* css reset */
+.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close{ display: none;}
+
+.content{ width:1000px; height:1300px; margin:0 auto; margin-top:20px; margin-bottom:20px;}
+.content .title{ width:1000px; height:54px; display:block; background:url(../imges/movie/content_title2.jpg) no-repeat top left;}
+.content .title{ width:1000px; height:43px; margin-bottom:20px; display:block;}
+	.content .title a{ float:left; width:26%; height:100%;}
+	.content .title #step1{ background:url(../imges/movie/content_title2.jpg) no-repeat;}
+	.content .title #step2{ background:url(../imges/movie/content_title2.jpg) no-repeat 35% 0%;}
+	.content .title #step3{ background:url(../imges/movie/content_title2.jpg) no-repeat 70% 0%;}
+	.content .title #step4{ background:url(../imges/movie/content_title2.jpg) no-repeat 99% 0%; width:22%;}
+	.content .title #step1:hover{ background:url(../imges/movie/content_title1.jpg) no-repeat;}
+	.content .title #step2:hover{ background:url(../imges/movie/content_title2.jpg) no-repeat 35% 0%;}
+/*	.content .title #step3:hover{ background:url(../imges/movie/content_title3.jpg) no-repeat 70% 0%;}
+	.content .title #step4:hover{ background:url(../imges/movie/content_title4.jpg) no-repeat 99% 0%; width:22%;}*/
+
+.sit{ width:1000px; height:250px; margin:8px 0 20px 0; padding-bottom:10px; position: relative;}
+.sit h3,.food h3, .unreg h3{width:90%; height:50px; margin:0 auto;line-height:50px; margin-top:20px; margin-bottom:20px;border-bottom:dashed 1px #b5b5b5; padding-left:0;}
+.sit h3 span{ font:normal 14px/50px "微软雅黑"; margin-left:110px;}
+.sit h3 a{ font:normal 12px/50px "微软雅黑"; float:right;}
+.sit div{width:90%; height:100px; margin:0 auto; }
+.sit div div{ width:100px; height:26px; float:left; line-height:26px;}
+.sit div .sit_div{background: url(../imges/movie/sit_div.jpg) no-repeat top left;width: 880px; height: 90px;}
+.sit div .sit_green{ background:url(../imges/movie/sit_div_img.jpg)  no-repeat top left; padding-left:30px; margin-left:280px;}
+.sit div .sit_ashy{ background:url(../imges/movie/sit_div_img2.jpg)  no-repeat top left; padding-left:30px;}
+.sit div .sit_ashy2{ background:url(../imges/movie/sit_div_img2.jpg)  no-repeat top left;}
+.sit div .sit_orange{ background:url(../imges/movie/sit_div_img3.jpg)  no-repeat top left; padding-left:30px;}
+.sit div .sit_orange2{ background:url(../imges/movie/sit_div_img3.jpg)  no-repeat top left;}
+.sit div .sit_red{ background:url(../imges/movie/sit_div_img4.png)  no-repeat top left; padding-left:30px;}
+.sit div .sit_red2{ background:url(../imges/movie/sit_div_img4.png)  no-repeat top left;}
+.sit>a{float:right; margin-right:50px;}
+.sit .choose_exp{height:auto; float:left;margin-left: 55px;}
+.sit .c_box{width:900px; overflow-y:hidden; overflow-x:auto;+position: relative;+z-index: 4;}
+.sit .c_content{ margin:0 auto; text-align:center; float: none;}
+.c_content dl dt{float:left;width:60px;height:40px;line-height:40px;font-size:14px;color:#000;}
+.c_content dl dt.r{ float:right;}
+.c_content dl dd{float:left;margin:0;padding:0;}
+.c_content dl dd ol{list-style:none;margin:0;padding:0;}
+.c_content dl dd ol li{float:left;width:23px;height:25px;line-height:60px;_line-height:54px;padding:0 2px;font-weight:bold;background:url(../imges/movie/sit_div_img.jpg) top left no-repeat;color:#000;cursor:pointer; position: relative; z-index:1;}
+.c_content .none {overflow:hidden; text-indent:-2000px; cursor:auto; background:none;}
+
+.food{width:1000px; float:left; padding-bottom:20px; margin:8px 0 20px 0;}
+.food div{ float:left;}
+.food_left{ margin-left:50px;}
+.food_left h5,.food div h5{ float:left; width:100%; height: 48px; overflow: hidden;}
+.food_left img,.food div img{ float:left; margin-right:12px;}
+.food_left span,.food div span{ color:#ec5c27; float:left; width:100%;}
+.food_left .buy_text,.food div .buy_text{ float:left; color:#909090; width:37px;}
+#buy_input{ width:78px; height:24px; background:url(../imges/movie/buy_input.jpg) no-repeat;}
+#buy_input .buy_number{ float:left; width:35px; height:12px; text-align:center; line-height:12px; margin:0 auto; margin-top:4px;}
+.good_item .decrease_num{ float:left; height:14px; line-height:20px; width:14px; text-align:center; display:block; cursor:pointer; margin:5px 5px 0 0;}
+.good_item .increase_num{float:left; height:14px; line-height:20px; width:14px; text-align:center; display:block; cursor:pointer; margin:5px 0 0 3px;}
+.money{ width:960px; padding:20px;color:#ec5c27; float:left;}
+.money p{ margin:0; padding-left:30px; border-bottom: 1px #909090 dashed; padding-bottom:1px; margin-bottom:8px; font-size:18px; padding-bottom:5px;}
+.moneytal{ display:block; font:bold 20px "微软雅黑"; margin-left:30px; float:left; width:930px; margin-top:8px;}
+.button_green_next{ width:147px; height:48px; margin:0 auto; background:#5DB6E0; float:right; margin-right:65px;text-decoration: none;color: #FFF;text-align: center;line-height: 48px;font-size: 20px;font-weight: normal;}
+.button_green_next:hover{ color:#fff;}
+span.left{background: url(../imges/movie/icon_before.png) no-repeat; width:84px; height:48px; z-index:100; position:absolute; padding-top: 26px; margin-left:-42px; margin-top: 220px; left:0px; cursor: pointer }
+.leftTxt{font: bold 14px/24px "微软雅黑"; color:#FFF; float: left; width: 84px; height:40px; padding-top: 12px; background: url(../imges/movie/time_bg.png) center top no-repeat; text-align: center;text-shadow: #666 0 1px 0;}
+span.right{background: url(../imges/movie/icon_after.png) no-repeat; width:84px; height:48px; z-index:100; position:absolute; padding-top: 26px; margin-right:-42px; margin-top: 220px; right:0px; cursor: pointer}
+.rightTxt{font: bold 14px/24px "微软雅黑"; color:#FFF; float: left; width: 84px; height:40px; padding-top: 12px; background: url(../imges/movie/time_bg.png) center top no-repeat; text-align: center;text-shadow: #666 0 1px 0;}
+.leftDis{color:#909090; cursor: default;}
+span.left-none{background: url(../imges/movie/icon_after_none.png) no-repeat;cursor: default;}
+span.right-none{background: url(../imges/movie/icon_before_none.png) no-repeat;cursor: default;}
+.goodsplay{margin-left: 20px;}
+.seatDiv2{display: none;position: absolute; width: 125px; height: 40px; top:40px; left:-50px; border: solid 1px #909090; background-color:#FFF; color: #000;
+	/* css3 box shadow */
+	-webkit-box-shadow:1px 1px 3px #969696;
+    -moz-box-shadow:1px 1px 3px #969696;
+    box-shadow:1px 1px 3px #969696;
+	
+	/*box shadow for ie6,7,8*/
+	filter: progid:DXImageTransform.Microsoft.Shadow(color='#969696', Direction=135, Strength=3);
+}
+.ss2{position:absolute;top:-5px;left:60px; z-index:999; +display:none;}
+.setinfo2{position: absolute;top:2px; left:0px; width: 125px;line-height:20px;}
+.seatDiv{display: none;position: absolute; width: 63px; height: 25px; top:40px; left:-12px; border: solid 1px #909090; background-color:#FFF; color: #000;
+	/* css3 box shadow */
+	-webkit-box-shadow:1px 1px 3px #969696;
+    -moz-box-shadow:1px 1px 3px #969696;
+    box-shadow:1px 1px 3px #969696;
+	
+	/*box shadow for ie6,7,8*/
+	filter: progid:DXImageTransform.Microsoft.Shadow(color='#969696', Direction=135, Strength=3);
+}
+.ss{position:absolute;top:-5px;left:22px; z-index:999; +display:none;}
+.setinfo{position: absolute;top:-17px; left:3px; width: 57px}	/* movie_buy.js里用到 */
+.nextbtn_loading{display: none; margin: 10px 100px 3px 0; float: right;}
+
+/*广告位置*/
+#advert { float:right; margin-right:10px; font-size:14px; color:#EC5C27;background: url(../imges/movie/icon_laba_orange.png) 0 center no-repeat;padding-left: 35px;}
+
+/*------- 无注册购买 ------------*/
+.unreg{float: left; width: 1000px; font-size: 16px; margin-bottom: 20px; display: none;}
+.unregTip{float: left; font-size: 14px; margin: 2px 0 0 10px;}
+.moinfo{margin-left: 50px; height: 100px;}
+.moinfo span, .moinfo2 span{float: left; font-size:16px; color: #000000;}
+.moinfo .err_tip{color: #dd4b39; font-size:12px; margin:0 0 0 63px; width: 1000px; height: 24px}
+.moinfo input[type="text"], .moinfo2 input[type="text"]{float:left; height: 22px; line-height: 22px; width: 200px;}
+.moinfo .lmtime{float:left; display: none; color: #909090; font-size: 12px}
+#unregDiv .moinfo .refsms{cursor: default; color: #909090}
+.lrbtn{float: left; width: 80px; margin: 0 25px}
+.att_sms{  color: #000000; font-size: 12px; cursor: pointer;}
+.att_sms_loading{display:none; width: 20px; margin: 2px 0 0 50px}
+.login_loading{display:none; float: left; width: 25px; margin: 3px 55px 0 50px}
+#logtd{display: none}
+.unreg .moinfo2{margin-left: 50px; height: 55px;}
+
+
+/* 1分钟未选完票弹出购买提示 */
+.purchaseTip {
+	width: 100%;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 20px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	background: #f00;
+	filter: alpha(opacity=60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+	z-index: 100;}
+.purchaseTip .i_close {
+	position: relative;
+	left: 10px;
+	top: 10px;}
+	
+.foodImg{ float: left;}
+.good_item{margin-bottom: 30px; margin-right: 8px;}
+.goods_item{margin-left: 50px; height: auto;}
+.good1 img{width:700px; height: 100px; }

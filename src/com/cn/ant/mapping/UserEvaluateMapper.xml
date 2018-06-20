@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cn.ant.dao.UserEvaluateMapper" >
+  <resultMap id="BaseResultMap" type="com.cn.ant.entity.UserEvaluate" >
+    <id column="e_id" property="eId" jdbcType="INTEGER" />
+    <result column="m_id" property="mId" jdbcType="INTEGER" />
+    <result column="u_id" property="uId" jdbcType="INTEGER" />
+    <result column="e_info" property="eInfo" jdbcType="VARCHAR" />
+    <result column="e_time" property="eTime" jdbcType="TIMESTAMP" />
+    <association property="user" resultMap="com.cn.ant.dao.UserMapper.BaseResultMap"></association>
+	<association property="movie" resultMap="com.cn.ant.dao.MovieMapper.BaseResultMap"></association>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    e_id, m_id, u_id, e_info, e_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from ant_user_evaluate
+    where e_id = #{eId,jdbcType=INTEGER}
+  </select>
+  <select id="selectByMovieId" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    *
+    from ant_user_evaluate e,ant_movie_info m,ant_user_info u
+    where e.m_id = #{mId} and e.m_id = m.m_id and e.u_id  = u.u_id order by e.e_time desc
+  </select>
+  <select id="selectByUserId" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    *
+    from ant_user_evaluate e,ant_movie_info m,ant_user_info u 
+    where e.u_id = #{uId} and e.m_id = m.m_id and e.u_id  = u.u_id order by e.e_time desc
+  </select>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from ant_user_evaluate
+    where e_id = #{eId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.cn.ant.entity.UserEvaluate" >
+    insert into ant_user_evaluate (e_id, m_id, u_id, 
+      e_info, e_time)
+    values (#{eId,jdbcType=INTEGER}, #{mId,jdbcType=INTEGER}, #{uId,jdbcType=INTEGER}, 
+      #{eInfo,jdbcType=VARCHAR}, #{eTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.cn.ant.entity.UserEvaluate" >
+    insert into ant_user_evaluate
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="eId != null" >
+        e_id,
+      </if>
+      <if test="mId != null" >
+        m_id,
+      </if>
+      <if test="uId != null" >
+        u_id,
+      </if>
+      <if test="eInfo != null" >
+        e_info,
+      </if>
+      <if test="eTime != null" >
+        e_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="eId != null" >
+        #{eId,jdbcType=INTEGER},
+      </if>
+      <if test="mId != null" >
+        #{mId,jdbcType=INTEGER},
+      </if>
+      <if test="uId != null" >
+        #{uId,jdbcType=INTEGER},
+      </if>
+      <if test="eInfo != null" >
+        #{eInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="eTime != null" >
+        #{eTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.cn.ant.entity.UserEvaluate" >
+    update ant_user_evaluate
+    <set >
+      <if test="mId != null" >
+        m_id = #{mId,jdbcType=INTEGER},
+      </if>
+      <if test="uId != null" >
+        u_id = #{uId,jdbcType=INTEGER},
+      </if>
+      <if test="eInfo != null" >
+        e_info = #{eInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="eTime != null" >
+        e_time = #{eTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where e_id = #{eId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.cn.ant.entity.UserEvaluate" >
+    update ant_user_evaluate
+    set m_id = #{mId,jdbcType=INTEGER},
+      u_id = #{uId,jdbcType=INTEGER},
+      e_info = #{eInfo,jdbcType=VARCHAR},
+      e_time = #{eTime,jdbcType=TIMESTAMP}
+    where e_id = #{eId,jdbcType=INTEGER}
+  </update>
+</mapper>

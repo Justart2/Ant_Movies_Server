@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cn.ant.dao.ManagerMapper" >
+  <resultMap id="BaseResultMap" type="com.cn.ant.entity.Manager" >
+    <id column="a_id" property="aId" jdbcType="INTEGER" />
+    <result column="a_name" property="aName" jdbcType="VARCHAR" />
+    <result column="a_psw" property="aPsw" jdbcType="VARCHAR" />
+    <result column="a_sex" property="aSex" jdbcType="INTEGER" />
+    <result column="a_age" property="aAge" jdbcType="INTEGER" />
+    <result column="a_grant" property="aGrant" jdbcType="VARCHAR" />
+    <result column="a_phone" property="aPhone" jdbcType="VARCHAR" />
+    <result column="a_mail" property="aMail" jdbcType="VARCHAR" />
+    <result column="a_address" property="aAddress" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    a_id, a_name, a_psw, a_sex, a_age, a_grant, a_phone, a_mail, a_address
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from ant_admin_info
+    where a_id = #{aId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from ant_admin_info
+    where a_id = #{aId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.cn.ant.entity.Manager" >
+    insert into ant_admin_info (a_id, a_name, a_psw, 
+      a_sex, a_age, a_grant, 
+      a_phone, a_mail, a_address
+      )
+    values (#{aId,jdbcType=INTEGER}, #{aName,jdbcType=VARCHAR}, #{aPsw,jdbcType=VARCHAR}, 
+      #{aSex,jdbcType=INTEGER}, #{aAge,jdbcType=INTEGER}, #{aGrant,jdbcType=VARCHAR}, 
+      #{aPhone,jdbcType=VARCHAR}, #{aMail,jdbcType=VARCHAR}, #{aAddress,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.cn.ant.entity.Manager" >
+    insert into ant_admin_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="aId != null" >
+        a_id,
+      </if>
+      <if test="aName != null" >
+        a_name,
+      </if>
+      <if test="aPsw != null" >
+        a_psw,
+      </if>
+      <if test="aSex != null" >
+        a_sex,
+      </if>
+      <if test="aAge != null" >
+        a_age,
+      </if>
+      <if test="aGrant != null" >
+        a_grant,
+      </if>
+      <if test="aPhone != null" >
+        a_phone,
+      </if>
+      <if test="aMail != null" >
+        a_mail,
+      </if>
+      <if test="aAddress != null" >
+        a_address,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="aId != null" >
+        #{aId,jdbcType=INTEGER},
+      </if>
+      <if test="aName != null" >
+        #{aName,jdbcType=VARCHAR},
+      </if>
+      <if test="aPsw != null" >
+        #{aPsw,jdbcType=VARCHAR},
+      </if>
+      <if test="aSex != null" >
+        #{aSex,jdbcType=INTEGER},
+      </if>
+      <if test="aAge != null" >
+        #{aAge,jdbcType=INTEGER},
+      </if>
+      <if test="aGrant != null" >
+        #{aGrant,jdbcType=VARCHAR},
+      </if>
+      <if test="aPhone != null" >
+        #{aPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="aMail != null" >
+        #{aMail,jdbcType=VARCHAR},
+      </if>
+      <if test="aAddress != null" >
+        #{aAddress,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.cn.ant.entity.Manager" >
+    update ant_admin_info
+    <set >
+      <if test="aName != null" >
+        a_name = #{aName,jdbcType=VARCHAR},
+      </if>
+      <if test="aPsw != null" >
+        a_psw = #{aPsw,jdbcType=VARCHAR},
+      </if>
+      <if test="aSex != null" >
+        a_sex = #{aSex,jdbcType=INTEGER},
+      </if>
+      <if test="aAge != null" >
+        a_age = #{aAge,jdbcType=INTEGER},
+      </if>
+      <if test="aGrant != null" >
+        a_grant = #{aGrant,jdbcType=VARCHAR},
+      </if>
+      <if test="aPhone != null" >
+        a_phone = #{aPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="aMail != null" >
+        a_mail = #{aMail,jdbcType=VARCHAR},
+      </if>
+      <if test="aAddress != null" >
+        a_address = #{aAddress,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where a_id = #{aId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.cn.ant.entity.Manager" >
+    update ant_admin_info
+    set a_name = #{aName,jdbcType=VARCHAR},
+      a_psw = #{aPsw,jdbcType=VARCHAR},
+      a_sex = #{aSex,jdbcType=INTEGER},
+      a_age = #{aAge,jdbcType=INTEGER},
+      a_grant = #{aGrant,jdbcType=VARCHAR},
+      a_phone = #{aPhone,jdbcType=VARCHAR},
+      a_mail = #{aMail,jdbcType=VARCHAR},
+      a_address = #{aAddress,jdbcType=VARCHAR}
+    where a_id = #{aId,jdbcType=INTEGER}
+  </update>
+</mapper>

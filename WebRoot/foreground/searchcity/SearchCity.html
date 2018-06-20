@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ant影视城</title>
+<style type="text/css">
+body {
+	margin: 0px;
+	padding: 0px;
+	background-image: url(/Zhizhoubian/user_frame/img/bb.jpg);
+}
+
+.search_city_title {
+	height: 45px;
+	width: 100%;
+	background: #03C5FF;
+	opacity: 0.8;
+	filter: alpha(opacity = 80);
+}
+
+.search_city_title_left {
+	margin-left: 210px;
+	float: left;
+	margin-top: 4px;
+}
+
+.search_city_title_center {
+	margin-left: 5px;
+	color: #fff;
+	font-size: 30px;
+	font-family: "楷体";
+	float: left;
+	line-height: 45px;
+}
+
+.search_city_title_right {
+	margin-right: 250px;
+	line-height: 45px;
+	color: #fff;
+	font-size: 17px;
+	float: right;
+	display: inline-block;
+}
+
+.search_city_title_right a {
+	color: #fff;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+.search_city_title_right_content {
+	margin-right: 10px;
+}
+
+.search_city_content_chosecity {
+	top: 250px;
+	position: absolute;
+}
+
+.search_city_content_chosecity_left {
+	margin-left: 240px;
+	float: left;
+	background: #fff;
+	margin-right: 10px;
+}
+
+.search_city_content_chosecity_left a {
+	display: block;
+	width: 130px;
+	height: 56px;
+	color: #000;
+	line-height: 56px;
+	text-align: center;
+	font-size: 20px;
+}
+
+.search_city_content_chosecity_center {
+	height: 56px;
+	float: left;
+}
+
+.search_city_content_chosecity_text {
+	width: 460px;
+	height: 20px;
+	display: block;
+	border: 0px none;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 18px 5px 18px 15px;
+	float: left;
+	height: 20px;
+	display: block;
+	border: 0px none;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 18px 5px 18px 15px;
+}
+
+.search_city_content_chosecity_center a {
+	float: left;
+	display: block;
+	color: #fff;
+	font-size: 20px;
+	line-height: 56px;
+	background-color: #03C5FF;
+	text-align: center;
+	width: 130px;
+	height: 56px;
+	width: 130px;
+}
+
+.search_city_content_chosecity_right {
+	float: left;
+	background-color: #EEE;
+	margin-left: 10px;
+}
+
+.search_city_content_chosecity_right a {
+	display: block;
+	width: 130px;
+	height: 56px;
+	color: #aaa;
+	line-height: 56px;
+	text-align: center;
+	font-size: 20px;
+}
+
+.search_city_bottom {
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	margin-bottom: 20px;
+	color: #ccc;
+	font-size: 15px;
+	bottom: 20px;
+}
+
+.searchMap {
+	width: 1010px;
+	height: 410px;
+	top: 100px;
+	margin: auto;
+	position: relative;
+	visibility:hidden;
+}
+
+#divText{
+	background:#F5F3F0;
+	float: left;
+	width:300px;
+	height:400px;
+	overFlow-y:auto;  
+	overFlow-x:hidden;  
+	border: solid 2px gray;
+}
+#divMap {
+	float: left;
+	width: 700px;
+	height: 400px;
+	border: solid 2px gray;
+}
+ul{
+	list-style-type: none;
+	padding: 5px;
+	margin: 0px;
+	
+}
+ul li{
+	background:#F5F3F0;
+}
+ul a li{
+	padding-left:10px;
+	width:100%;
+	height:50px;
+	line-height:50px;
+	font-size:15px;
+}
+ul a li:HOVER{
+	background:#03C5FF;
+}
+ul a:link {
+	text-decoration: none;
+}
+</style>
+
+<script src="/Zhizhoubian/user_frame/searchcity/lib/sea.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.2"></script>
+<script type="text/javascript">
+	function getSerachHistory() {
+		alert("没有搜索历史");
+	}
+	/* function serachCityInfo() {
+		alert("dff");
+	} */
+</script>
+<script>
+	seajs.use([ '/AntMoviesForeground/foreground/searchcity/src/dialog-plus' ],
+			function(dialog) {
+				window.dialog = dialog;
+			});
+</script>
+<script>
+	seajs.config({
+		alias : {
+			"jquery" : "jquery-1.10.2.js"
+		}
+	});
+</script>
+<!-- 调用art dialog插件 -->
+<script>
+	window.console = window.console || {
+		log : function() {
+		}
+	};
+	seajs.use([ 'jquery' ], function($) {
+
+		$('a[data-event=getCity]').on('click', function() {
+			top.dialog({
+				id : 'chosecity-dialog',
+				title : '选择城市',
+				width : '720',
+				height : '200',
+				url : '/AntMoviesForeground/foreground/searchcity/chosecity.html',
+				quickClose : true, //点击页面其他部分关闭dialog
+			}).show(this);
+			return false;
+		});
+	});
+</script>
+<script>
+	window.console = window.console || {
+		log : function() {
+		}
+	};
+	seajs.use([ 'jquery' ], function($) {
+
+		$('a[data-event=getCityHistory]').on('click', function() {
+			top.dialog({
+				id : 'chosecity-dialog',
+				title : '搜索历史',
+				width : '300',
+				height : '200',
+				url : '/AntMoviesForeground/foreground/searchcity/chosecityhistory.html',
+				quickClose : true, //点击页面其他部分关闭dialog
+			}).show(this);
+			return false;
+		});
+	});
+</script>
+<!-- 调用百度地图接口 -->
+<script type="text/javascript" >
+	function serachCityInfo() {
+		var divText=document.getElementById("divText");//获取地图文本区元素
+		
+		/*修改div布局*/
+		var mapDiv=document.getElementById("search_content");
+		mapDiv.style.top="80px";
+		var mapDiv=document.getElementById("searchMap");
+		mapDiv.style.visibility="visible";
+		/*创建地图  */
+		var map = new BMap.Map("divMap");
+		var city = new BMap.LocalSearch(map,{renderOptions:{map:map,autoViewport:true}});
+		
+		map.clearOverlays(); //清除地图上所有标记  
+		divText.innerHTML="";//清楚div中所有元素
+		var c = document.getElementById("cityName").innerHTML;
+		var s =document.getElementById("txtSearch").value;
+		if(c=="选择城市"){
+			c=s;//未选城市直接输入的地址
+		}
+		city.search(c);//查找城市  
+		var ls = new BMap.LocalSearch(c);
+		ls.search(s);
+		var i = 1;
+		
+		var ul=document.createElement("ul");//js创建动态ul
+		ls.setSearchCompleteCallback(function(rs) {
+			if (ls.getStatus() == BMAP_STATUS_SUCCESS) {
+				for (var j = 0; j < rs.getCurrentNumPois(); j++) {
+					var poi = rs.getPoi(j);
+					map.addOverlay(new BMap.Marker(poi.point)); //如果查询到，则添加红色marker  
+					/* cityName.value += poi.title + ":" + poi.point.lng //地址名及经纬度
+							+ "," + poi.point.lat + '\n'; */
+					var li=document.createElement("li");
+					var a=document.createElement("a");
+					a.href="/AntMoviesForeground/user/chose-city.do?city_id="+c;//超链接跳转
+					var text=document.createTextNode(poi.title);
+					li.appendChild(text);
+					a.appendChild(li);
+					ul.appendChild(a);
+				}
+				divText.appendChild(ul);
+				if (rs.getPageIndex != rs.getNumPages()) {
+					ls.gotoPage(i);
+					i = i + 1;
+				}
+			}
+		});
+	}
+</script>
+
+</head>
+
+<body>
+	<div class="search_city_title">
+		<div class="search_city_title_left">
+			
+		</div>
+		<div class="search_city_title_center">Ant影视城</div>
+
+		<div class="search_city_title_right">
+			<a class="search_city_title_right_content" href="/Zhizhoubian/login/login.html">登录</a>
+			<span class="search_city_title_right_content">|</span> <a
+				class="search_city_title_right_content" href="/Zhizhoubian/login/login.html">注册</a>
+		</div>
+	</div>
+
+	<div class="search_city_content_chosecity" id="search_content">
+		<div class="search_city_content_chosecity_left">
+			<a data-event="getCity" href="javascript:void(0)"> <span
+				id="cityName">选择城市</span>
+			</a>
+		</div>
+		<div class="search_city_content_chosecity_center">
+			<input type="text" class="search_city_content_chosecity_text"
+				id="txtSearch" placeholder="输入地址搜索周边兼职" /> 
+				<a onclick="serachCityInfo()" href="javascript:void(0)">搜索</a>
+		</div>
+		<div class="search_city_content_chosecity_right">
+			<a data-event="getCityHistory" href="javascript:void(0)"> <span>搜索历史</span>
+				<span>▼</span>
+			</a>
+		</div>
+	</div>
+	
+	<div class="search_city_bottom">©2015 zhizhoubian.com
+		陇ICP证070791号 陇公网安备11010502025545号</div>
+	<div class="searchMap" id="searchMap">
+		<div id="divText"></div>
+		<div id="divMap"></div>
+	</div>
+	
+</body>
+</html>

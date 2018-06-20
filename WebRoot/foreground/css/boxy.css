@@ -1,0 +1,108 @@
+.boxy-wrapper {
+	position: absolute;
+}
+.fixed.boxy-wrapper {
+	position: fixed;
+}
+.boxy-modal-blackout {
+	left: 0px; top: 0px; position: absolute; background-color: black;
+}
+.boxy-wrapper {
+	empty-cells: show;
+}
+.boxy-wrapper .top-left {
+	padding: 0px; width: 10px; height: 10px;
+}
+.boxy-wrapper .top-right {
+	padding: 0px; width: 10px; height: 10px;
+}
+.boxy-wrapper .bottom-right {
+	padding: 0px; width: 10px; height: 10px;
+}
+.boxy-wrapper .bottom-left {
+	padding: 0px; width: 10px; height: 10px;
+}
+.boxy-wrapper .top-left {
+	background: url("../../images/global/boxy/boxy-nw.png");
+}
+.boxy-wrapper .top-right {
+	background: url("../../images/global/boxy/boxy-ne.png");
+}
+.boxy-wrapper .bottom-right {
+	background: url("../../images/global/boxy/boxy-se.png");
+}
+.boxy-wrapper .bottom-left {
+	background: url("../../images/global/boxy/boxy-sw.png");
+}
+.boxy-wrapper .top-left {
+	
+}
+.boxy-wrapper .top-right {
+	
+}
+.boxy-wrapper .bottom-right {
+	
+}
+.boxy-wrapper .bottom-left {
+	
+}
+.boxy-wrapper .top {
+	padding: 0px; height: 10px; opacity: 0.6; background-color: black;
+}
+.boxy-wrapper .bottom {
+	padding: 0px; height: 10px; opacity: 0.6; background-color: black;
+}
+.boxy-wrapper .left {
+	padding: 0px; width: 10px; opacity: 0.6; background-color: black;
+}
+.boxy-wrapper .right {
+	padding: 0px; width: 10px; opacity: 0.6; background-color: black;
+}
+.boxy-wrapper .title-bar {
+	padding: 6px; position: relative; background-color: rgb(51, 51, 51);
+}
+.boxy-wrapper .dragging.title-bar {
+	cursor: move;
+}
+.boxy-wrapper .title-bar h2 {
+	margin: 0px; padding: 0px; color: white; line-height: 1; font-size: 12px; font-weight: normal;
+}
+.boxy-wrapper .title-bar .close {
+	top: 5px; right: 6px; color: white; font-size: 12px; position: absolute;
+}
+.boxy-wrapper .title-bar .close:hover {
+	background-color: rgb(69, 69, 69);
+}
+.boxy-inner {
+	padding: 0px; background-color: white;
+}
+.boxy-content {
+	background: url("../../images/global/boxy/boxy_bg.gif") no-repeat right bottom; padding: 15px;
+}
+.boxy-wrapper .question {
+	width: 350px; min-height: 60px; _height: 60px;
+}
+.boxy-wrapper .answers {
+	text-align: right;
+}
+.boxy-btn1 {
+	border-width: 1px; border-style: solid; padding: 3px 12px 1.9px; line-height: 15px; letter-spacing: 1px; overflow: visible; cursor: pointer;
+}
+.boxy-btn2 {
+	border-width: 1px; border-style: solid; padding: 3px 12px 1.9px; line-height: 15px; letter-spacing: 1px; overflow: visible; cursor: pointer;
+}
+.boxy-btn3 {
+	border-width: 1px; border-style: solid; padding: 3px 12px 1.9px; line-height: 15px; letter-spacing: 1px; overflow: visible; cursor: pointer;
+}
+.boxy-btn1 {
+	border-color: rgb(90, 126, 198) rgb(44, 62, 95) rgb(44, 62, 95) rgb(90, 126, 198); color: white; background-color: rgb(66, 95, 153);
+}
+.boxy-btn2 {
+	border-color: rgb(238, 238, 238) rgb(187, 187, 187) rgb(187, 187, 187) rgb(238, 238, 238); color: rgb(51, 51, 51); background-color: rgb(236, 233, 216);
+}
+.boxy-btn3 {
+	border-color: rgb(234, 234, 234) rgb(170, 170, 170) rgb(170, 170, 170) rgb(234, 234, 234); padding: 3px 5px 1.9px; color: rgb(51, 51, 51); background-color: rgb(234, 234, 234);
+}
+.boxy-btn3:hover {
+	border-color: rgb(206, 216, 227) rgb(162, 173, 188) rgb(162, 173, 188) rgb(206, 216, 227); background-color: rgb(202, 213, 235);
+}

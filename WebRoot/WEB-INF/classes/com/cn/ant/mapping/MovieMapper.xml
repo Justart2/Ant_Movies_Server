@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cn.ant.dao.MovieMapper" >
+  <resultMap id="BaseResultMap" type="com.cn.ant.entity.Movie" >
+    <id column="m_id" property="mId" jdbcType="INTEGER" />
+    <result column="m_name" property="mName" jdbcType="VARCHAR" />
+    <result column="m_type" property="mType" jdbcType="VARCHAR" />
+    <result column="m_director" property="mDirector" jdbcType="VARCHAR" />
+    <result column="m_actor" property="mActor" jdbcType="VARCHAR" />
+    <result column="m_country" property="mCountry" jdbcType="VARCHAR" />
+    <result column="m_version" property="mVersion" jdbcType="VARCHAR" />
+    <result column="m_time_length" property="mTimeLength" jdbcType="VARCHAR" />
+    <result column="m_description" property="mDescription" jdbcType="VARCHAR" />
+    <result column="m_release_time" property="mReleaseTime" jdbcType="DATE" />
+    <result column="m_price" property="mPrice" jdbcType="REAL" />
+    <result column="m_rate" property="mRate" jdbcType="VARCHAR" />
+    <result column="m_picture" property="mPicture" jdbcType="VARCHAR" />
+    <result column="m_stage_photos" property="mStagePhotos" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    m_id, m_name, m_type, m_director, m_actor, m_country, m_version, m_time_length, m_description, 
+    m_release_time, m_price, m_rate, m_picture, m_stage_photos
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from ant_movie_info
+    where m_id = #{mId,jdbcType=INTEGER}
+  </select>
+  
+  <!-- 查询所有电影信息 按照喜欢度高到低排序-->
+  <select id="selectAllMovies" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from ant_movie_info order by m_rate desc
+    
+  </select>
+  <!-- 查询正在热映电影信息 -->
+  <select id="selectShowingMovies" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from ant_movie_info where m_release_time &lt;= #{date} order by m_rate desc
+    
+  </select>
+  <!-- 查询即将上映电影信息 -->
+  <select id="selectWillShowMovies" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from ant_movie_info where m_release_time &gt; #{date} order by m_rate desc
+    
+  </select>
+  
+  <!-- 查询喜欢率最高的10部电影信息 -->
+  <select id="selectLikeMovies" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from ant_movie_info order by m_rate desc limit 0,#{count}
+    
+  </select>
+  
+  <!-- 修改电影喜欢率 -->
+  <update id="updateRateByMovieId" parameterType="java.lang.Integer">
+  		update ant_movie_info set m_rate = #{rate}  where m_id = #{mId} 
+  </update>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from ant_movie_info
+    where m_id = #{mId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.cn.ant.entity.Movie" >
+    insert into ant_movie_info (m_id, m_name, m_type, 
+      m_director, m_actor, m_country, 
+      m_version, m_time_length, m_description, 
+      m_release_time, m_price, m_rate, 
+      m_picture, m_stage_photos)
+    values (#{mId,jdbcType=INTEGER}, #{mName,jdbcType=VARCHAR}, #{mType,jdbcType=VARCHAR}, 
+      #{mDirector,jdbcType=VARCHAR}, #{mActor,jdbcType=VARCHAR}, #{mCountry,jdbcType=VARCHAR}, 
+      #{mVersion,jdbcType=VARCHAR}, #{mTimeLength,jdbcType=VARCHAR}, #{mDescription,jdbcType=VARCHAR}, 
+      #{mReleaseTime,jdbcType=DATE}, #{mPrice,jdbcType=REAL}, #{mRate,jdbcType=VARCHAR}, 
+      #{mPicture,jdbcType=VARCHAR}, #{mStagePhotos,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.cn.ant.entity.Movie" >
+    insert into ant_movie_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="mId != null" >
+        m_id,
+      </if>
+      <if test="mName != null" >
+        m_name,
+      </if>
+      <if test="mType != null" >
+        m_type,
+      </if>
+      <if test="mDirector != null" >
+        m_director,
+      </if>
+      <if test="mActor != null" >
+        m_actor,
+      </if>
+      <if test="mCountry != null" >
+        m_country,
+      </if>
+      <if test="mVersion != null" >
+        m_version,
+      </if>
+      <if test="mTimeLength != null" >
+        m_time_length,
+      </if>
+      <if test="mDescription != null" >
+        m_description,
+      </if>
+      <if test="mReleaseTime != null" >
+        m_release_time,
+      </if>
+      <if test="mPrice != null" >
+        m_price,
+      </if>
+      <if test="mRate != null" >
+        m_rate,
+      </if>
+      <if test="mPicture != null" >
+        m_picture,
+      </if>
+      <if test="mStagePhotos != null" >
+        m_stage_photos,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="mId != null" >
+        #{mId,jdbcType=INTEGER},
+      </if>
+      <if test="mName != null" >
+        #{mName,jdbcType=VARCHAR},
+      </if>
+      <if test="mType != null" >
+        #{mType,jdbcType=VARCHAR},
+      </if>
+      <if test="mDirector != null" >
+        #{mDirector,jdbcType=VARCHAR},
+      </if>
+      <if test="mActor != null" >
+        #{mActor,jdbcType=VARCHAR},
+      </if>
+      <if test="mCountry != null" >
+        #{mCountry,jdbcType=VARCHAR},
+      </if>
+      <if test="mVersion != null" >
+        #{mVersion,jdbcType=VARCHAR},
+      </if>
+      <if test="mTimeLength != null" >
+        #{mTimeLength,jdbcType=VARCHAR},
+      </if>
+      <if test="mDescription != null" >
+        #{mDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="mReleaseTime != null" >
+        #{mReleaseTime,jdbcType=DATE},
+      </if>
+      <if test="mPrice != null" >
+        #{mPrice,jdbcType=REAL},
+      </if>
+      <if test="mRate != null" >
+        #{mRate,jdbcType=VARCHAR},
+      </if>
+      <if test="mPicture != null" >
+        #{mPicture,jdbcType=VARCHAR},
+      </if>
+      <if test="mStagePhotos != null" >
+        #{mStagePhotos,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.cn.ant.entity.Movie" >
+    update ant_movie_info
+    <set >
+      <if test="mName != null" >
+        m_name = #{mName,jdbcType=VARCHAR},
+      </if>
+      <if test="mType != null" >
+        m_type = #{mType,jdbcType=VARCHAR},
+      </if>
+      <if test="mDirector != null" >
+        m_director = #{mDirector,jdbcType=VARCHAR},
+      </if>
+      <if test="mActor != null" >
+        m_actor = #{mActor,jdbcType=VARCHAR},
+      </if>
+      <if test="mCountry != null" >
+        m_country = #{mCountry,jdbcType=VARCHAR},
+      </if>
+      <if test="mVersion != null" >
+        m_version = #{mVersion,jdbcType=VARCHAR},
+      </if>
+      <if test="mTimeLength != null" >
+        m_time_length = #{mTimeLength,jdbcType=VARCHAR},
+      </if>
+      <if test="mDescription != null" >
+        m_description = #{mDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="mReleaseTime != null" >
+        m_release_time = #{mReleaseTime,jdbcType=DATE},
+      </if>
+      <if test="mPrice != null" >
+        m_price = #{mPrice,jdbcType=REAL},
+      </if>
+      <if test="mRate != null" >
+        m_rate = #{mRate,jdbcType=VARCHAR},
+      </if>
+      <if test="mPicture != null" >
+        m_picture = #{mPicture,jdbcType=VARCHAR},
+      </if>
+      <if test="mStagePhotos != null" >
+        m_stage_photos = #{mStagePhotos,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where m_id = #{mId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.cn.ant.entity.Movie" >
+    update ant_movie_info
+    set m_name = #{mName,jdbcType=VARCHAR},
+      m_type = #{mType,jdbcType=VARCHAR},
+      m_director = #{mDirector,jdbcType=VARCHAR},
+      m_actor = #{mActor,jdbcType=VARCHAR},
+      m_country = #{mCountry,jdbcType=VARCHAR},
+      m_version = #{mVersion,jdbcType=VARCHAR},
+      m_time_length = #{mTimeLength,jdbcType=VARCHAR},
+      m_description = #{mDescription,jdbcType=VARCHAR},
+      m_release_time = #{mReleaseTime,jdbcType=DATE},
+      m_price = #{mPrice,jdbcType=REAL},
+      m_rate = #{mRate,jdbcType=VARCHAR},
+      m_picture = #{mPicture,jdbcType=VARCHAR},
+      m_stage_photos = #{mStagePhotos,jdbcType=VARCHAR}
+    where m_id = #{mId,jdbcType=INTEGER}
+  </update>
+</mapper>

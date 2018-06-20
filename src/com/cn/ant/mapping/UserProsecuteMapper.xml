@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cn.ant.dao.UserProsecuteMapper" >
+  <resultMap id="BaseResultMap" type="com.cn.ant.entity.UserProsecute" >
+    <id column="p_id" property="pId" jdbcType="INTEGER" />
+    <result column="u_id" property="uId" jdbcType="INTEGER" />
+    <result column="p_info" property="pInfo" jdbcType="VARCHAR" />
+    <result column="p_time" property="pTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    p_id, u_id, p_info, p_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from ant_user_prosecute
+    where p_id = #{pId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from ant_user_prosecute
+    where p_id = #{pId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.cn.ant.entity.UserProsecute" >
+    insert into ant_user_prosecute (p_id, u_id, p_info, 
+      p_time)
+    values (#{pId,jdbcType=INTEGER}, #{uId,jdbcType=INTEGER}, #{pInfo,jdbcType=VARCHAR}, 
+      #{pTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.cn.ant.entity.UserProsecute" >
+    insert into ant_user_prosecute
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="pId != null" >
+        p_id,
+      </if>
+      <if test="uId != null" >
+        u_id,
+      </if>
+      <if test="pInfo != null" >
+        p_info,
+      </if>
+      <if test="pTime != null" >
+        p_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="pId != null" >
+        #{pId,jdbcType=INTEGER},
+      </if>
+      <if test="uId != null" >
+        #{uId,jdbcType=INTEGER},
+      </if>
+      <if test="pInfo != null" >
+        #{pInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="pTime != null" >
+        #{pTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.cn.ant.entity.UserProsecute" >
+    update ant_user_prosecute
+    <set >
+      <if test="uId != null" >
+        u_id = #{uId,jdbcType=INTEGER},
+      </if>
+      <if test="pInfo != null" >
+        p_info = #{pInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="pTime != null" >
+        p_time = #{pTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where p_id = #{pId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.cn.ant.entity.UserProsecute" >
+    update ant_user_prosecute
+    set u_id = #{uId,jdbcType=INTEGER},
+      p_info = #{pInfo,jdbcType=VARCHAR},
+      p_time = #{pTime,jdbcType=TIMESTAMP}
+    where p_id = #{pId,jdbcType=INTEGER}
+  </update>
+</mapper>

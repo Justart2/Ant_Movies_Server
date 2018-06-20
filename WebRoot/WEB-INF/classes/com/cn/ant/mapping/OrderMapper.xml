@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cn.ant.dao.OrderMapper" >
+  <resultMap id="BaseResultMap" type="com.cn.ant.entity.Order" >
+    <id column="o_id" property="oId" jdbcType="VARCHAR" />
+    <result column="u_id" property="uId" jdbcType="INTEGER" />
+    <result column="s_id" property="sId" jdbcType="INTEGER" />
+    <result column="o_ticket_count" property="oTicketCount" jdbcType="INTEGER" />
+    <result column="o_price" property="oPrice" jdbcType="DOUBLE" />
+    <result column="o_seat_info" property="oSeatInfo" jdbcType="VARCHAR" />
+    <result column="o_time" property="oTime" jdbcType="TIMESTAMP" />
+    <result column="o_state" property="oState" jdbcType="VARCHAR" />
+    <association property="movieShow" resultMap="com.cn.ant.dao.MovieShowMapper.BaseResultMap"></association>
+    <association property="user" resultMap="com.cn.ant.dao.UserMapper.BaseResultMap"></association>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    o_id, u_id, s_id, o_ticket_count, o_price, o_seat_info, o_time, o_state
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from ant_order_info
+    where o_id = #{oId,jdbcType=INTEGER}
+  </select>
+  <!-- 通过电影的排期ID查询订单信息（为了修改座位状态） -->
+  <select id="selectByMovieShowId" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    *
+    from ant_order_info o,ant_movie_show s,ant_movie_hall h
+    where o.s_id = #{sId,jdbcType=INTEGER} and s.s_id = o.s_id and h.h_id = s.h_id
+  </select>
+  <!-- 查询用户的订单信息 -->
+  <select id="selectOrderByUser" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+	select
+	*
+	from ant_order_info o,ant_movie_show s,ant_user_info u,ant_movie_info m,ant_movie_hall h,ant_movie_city c
+	where u.u_id = #{uId} and u.u_id=o.u_id and o.s_id=s.s_id and s.m_id=m.m_id and s.h_id=h.h_id and h.c_id=c.c_id;
+  </select>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from ant_order_info
+    where o_id = #{oId,jdbcType=INTEGER}
+  </delete>
+  <!-- 订单生成  -->
+  <insert id="insert" parameterType="com.cn.ant.entity.Order" >
+    insert into ant_order_info (o_id, u_id, s_id, 
+      o_ticket_count, o_price, o_seat_info, 
+      o_time, o_state)
+    values (#{oId,jdbcType=INTEGER}, #{uId,jdbcType=INTEGER}, #{sId,jdbcType=INTEGER}, 
+      #{oTicketCount,jdbcType=INTEGER}, #{oPrice,jdbcType=DOUBLE}, #{oSeatInfo,jdbcType=VARCHAR}, 
+      #{oTime,jdbcType=TIMESTAMP}, #{oState,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.cn.ant.entity.Order" >
+    insert into ant_order_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="oId != null" >
+        o_id,
+      </if>
+      <if test="uId != null" >
+        u_id,
+      </if>
+      <if test="sId != null" >
+        s_id,
+      </if>
+      <if test="oTicketCount != null" >
+        o_ticket_count,
+      </if>
+      <if test="oPrice != null" >
+        o_price,
+      </if>
+      <if test="oSeatInfo != null" >
+        o_seat_info,
+      </if>
+      <if test="oTime != null" >
+        o_time,
+      </if>
+      <if test="oState != null" >
+        o_state,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="oId != null" >
+        #{oId,jdbcType=INTEGER},
+      </if>
+      <if test="uId != null" >
+        #{uId,jdbcType=INTEGER},
+      </if>
+      <if test="sId != null" >
+        #{sId,jdbcType=INTEGER},
+      </if>
+      <if test="oTicketCount != null" >
+        #{oTicketCount,jdbcType=INTEGER},
+      </if>
+      <if test="oPrice != null" >
+        #{oPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="oSeatInfo != null" >
+        #{oSeatInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="oTime != null" >
+        #{oTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="oState != null" >
+        #{oState,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.cn.ant.entity.Order" >
+    update ant_order_info
+    <set >
+      <if test="uId != null" >
+        u_id = #{uId,jdbcType=INTEGER},
+      </if>
+      <if test="sId != null" >
+        s_id = #{sId,jdbcType=INTEGER},
+      </if>
+      <if test="oTicketCount != null" >
+        o_ticket_count = #{oTicketCount,jdbcType=INTEGER},
+      </if>
+      <if test="oPrice != null" >
+        o_price = #{oPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="oSeatInfo != null" >
+        o_seat_info = #{oSeatInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="oTime != null" >
+        o_time = #{oTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="oState != null" >
+        o_state = #{oState,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where o_id = #{oId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.cn.ant.entity.Order" >
+    update ant_order_info
+    set u_id = #{uId,jdbcType=INTEGER},
+      s_id = #{sId,jdbcType=INTEGER},
+      o_ticket_count = #{oTicketCount,jdbcType=INTEGER},
+      o_price = #{oPrice,jdbcType=DOUBLE},
+      o_seat_info = #{oSeatInfo,jdbcType=VARCHAR},
+      o_time = #{oTime,jdbcType=TIMESTAMP},
+      o_state = #{oState,jdbcType=VARCHAR}
+    where o_id = #{oId,jdbcType=INTEGER}
+  </update>
+</mapper>
